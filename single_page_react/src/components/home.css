@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+.kaushan-script-regular {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.home-section{
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.5),#f46d4b),url('/src/assets/cakebg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rem-div{
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-div{
+    text-align: center;
+}
+
+.center-div h1{
+    font-size: 65px;
+    color: white;
+    font-family: "Kaushan Script", cursive;
+}
+
+.center-div p{
+    color: white;
+    font-size: larger;
+    font-style: italic;
+}
+
+button{
+    padding: 7px 10px;
+    margin-top: 25px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.587);
+    border-radius: 2px;
+    font-size: medium;
+}
