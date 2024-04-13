@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+}
+
+.navbar{
+    justify-content: flex-end;
+    background-color: rgba(33, 31, 31, 0.927);
+    color: white;
+    height: 50px;
+    width: 100vw;
+}
+
+.inside-container{
+    width: 30%;
+    justify-content: space-around;
+}
+
+.home-section{
+    height: 75vh;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+.home-section>p{
+    height: 50%;
+    width: 50%;
+}
+
+.home-image{
+    height: 400px;
+    width: 400px;
+    background-color: red;
+}
+
+.footer{
+    height: 25vh;
+    width: 100vw;
+    justify-content: center;
+    background-color: blue;
+}
