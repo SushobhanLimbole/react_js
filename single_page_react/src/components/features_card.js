@@ -2,6 +2,6 @@ import './features.css';
 
 export default function FeaturesCard(props) {
     return (
-        <div className="features-card"></div>
+        <img src={props.url} alt='img' className="features-card"></img>
     );
 }

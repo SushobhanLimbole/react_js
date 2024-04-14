@@ -21,6 +21,8 @@
 
 .features-card{
     background-color: red;
+    height: 300px;
+    width: 460px;
     border-radius: 5px;
     background-position: center;
     background-size: cover;
