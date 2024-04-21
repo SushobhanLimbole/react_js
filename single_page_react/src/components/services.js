@@ -3,9 +3,12 @@ import img1 from '../assets/2.avif';
 
 export default function Services() {
     return (
-        <div>
+        <div className='services'>
             <div className="services-text">
-                <h1>We Provide Better</h1>
+            <div className='title-text flex'>
+                    <p>SERVICES</p>
+                </div>
+                <h1 className='h1-title'>We Provide Better</h1>
                 <div className='service-box'>
                     {/* <div className='single-box' style={{
                         backgroundImage: `url(${img1})`,

@@ -1,0 +1,147 @@
+* {
+    font-family: Poppins, sans-serif;
+}
+
+.Footer {
+    position: relative;
+    height: 75vh;
+    background: #efefef;
+    padding: 40px 0;
+}
+
+.title-text {
+    text-align: center;
+}
+
+.title-text p {
+    font-weight: 400;
+    color: #0e032e;
+    display: inline-block;
+    font-size: 20px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.title-text p:after {
+    background: linear-gradient(#019587, #fff);
+    border-bottom-right-radius: 35px;
+    border-top-left-radius: 35px;
+    content: "";
+    height: 35px;
+    left: 0;
+    position: absolute;
+    top: -20px;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+    width: 50px;
+    z-index: -1;
+}
+
+.title-text h1 {
+    font-size: 50px;
+    font-weight: 200;
+    padding-bottom: 70px;
+    margin-bottom: 10px;
+}
+
+.Footer_main {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+}
+
+.footer-img {
+    left: 50%;
+    max-width: 370px;
+    opacity: .3;
+    position: absolute;
+    top: 19%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 5px;
+}
+
+.footer-left,
+.footer-right {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.footer-left {
+    text-align: left;
+
+}
+
+.footer-left .fas {
+    width: 20px;
+}
+
+.footer-left-para {
+    display: flex;
+    margin-top: 20px;
+    line-height: 19px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right-para {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-row h1 {
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+.timing {
+    margin-left: 10px;
+}
+
+.footer-right .fas {
+    width: 20px;
+    margin: 8px;
+}
+
+.para2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links .fab {
+    border: 1px solid #009688;
+    color: #009688;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin: 40px 5px 0;
+    transition: .5s;
+    width: 40px;
+}
+
+.copywrite{
+    text-align: center;
+    margin-top: 30px;
+}

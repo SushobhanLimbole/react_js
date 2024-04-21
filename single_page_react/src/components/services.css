@@ -1,13 +1,59 @@
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.services-text{
+    background: #efefef;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .services-text h1{
     color: black;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
 }
+
+
+.h1-title{
+    font-size: 50px;
+    font-weight: 200;
+    padding-bottom: 70px;
+    margin-bottom: 10px;
+}
+
+
+.title-text p {
+    font-weight: 400;
+    color: #0e032e;
+    display: inline-block;
+    font-size: 20px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.title-text p:after {
+    background: linear-gradient(#019587, #fff);
+    border-bottom-right-radius: 35px;
+    border-top-left-radius: 35px;
+    content: "";
+    height: 35px;
+    left: 0;
+    position: absolute;
+    top: -20px;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+    width: 50px;
+    z-index: -1;
+}
+
 
 .service-box{
     width: 80%;
     display: flex;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 600px;
     margin: auto;
     justify-content: space-around;
@@ -16,7 +62,7 @@
 
 .single-box{
     flex-basis: 48%;
-    height: 48%;
+    height: 52%;
     /* width: 48%; */
     margin-bottom: 20px;
     background-color: red;
