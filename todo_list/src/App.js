@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Category from './Category/Category';
 
 function App() {
+  console.log('App called');
   return (
     <div className='main-section'>
       <SideBar/>

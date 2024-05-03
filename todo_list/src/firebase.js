@@ -1,29 +1,110 @@
-// Import the functions you need from the SDKs you need
+// // Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
+// import 'firebase/firestore';
+// import { addDoc, collection, collectionGroup, getDocs, getFirestore } from "firebase/firestore";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAmQ9nTGIvMrFFBeWcO0gb9QSpbvBD_CX8",
+//   authDomain: "todoweb-fb3c7.firebaseapp.com",
+//   projectId: "todoweb-fb3c7",
+//   storageBucket: "todoweb-fb3c7.appspot.com",
+//   messagingSenderId: "395653716623",
+//   appId: "1:395653716623:web:3165380a9f7fad48eeeefa",
+//   measurementId: "G-JDWPDZ37FY"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const firestore = getFirestore(app);
+
+// export const fetchFBData = async (collection = '', ref = '') => {
+//   const dataArray = [];
+//   const snapshot = await getDocs(collectionGroup(firestore, collection))
+//   // const data = await firestore.collection(collection).get();
+//   snapshot.forEach((doc) => {
+//     console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
+//     // dataArray.push({ id: doc.id, ...doc.data() });
+//   });
+
+//   // data.forEach(doc => {
+//   //   dataArray.push({ id: doc.id, ...doc.data() });
+//   // });
+//   return dataArray;
+// }
+
+//  export const addDocument = async (coll = '',name = '',date = '',cateId = '') => {
+//   if (coll == 'category') {
+//     const docRef = await addDoc(collection(firestore, coll), {
+//       name: name,
+//     });
+//     console.log('Document added with ID: ', docRef.id);
+//   } else {
+//     const docRef = await addDoc(collection(firestore, coll), {
+//       name: name,
+//       date: date,
+//       categoryId: cateId
+//     });
+//     console.log('Document added with ID: ', docRef.id);
+//   }
+// }
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import firebase from "firebase/compat/app";
 import 'firebase/firestore';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { addDoc, collection, collectionGroup, deleteDoc, getDocs, getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAmQ9nTGIvMrFFBeWcO0gb9QSpbvBD_CX8",
-  authDomain: "todoweb-fb3c7.firebaseapp.com",
-  projectId: "todoweb-fb3c7",
-  storageBucket: "todoweb-fb3c7.appspot.com",
-  messagingSenderId: "395653716623",
-  appId: "1:395653716623:web:3165380a9f7fad48eeeefa",
-  measurementId: "G-JDWPDZ37FY"
-};
+    apiKey: "AIzaSyAmQ9nTGIvMrFFBeWcO0gb9QSpbvBD_CX8",
+    authDomain: "todoweb-fb3c7.firebaseapp.com",
+    projectId: "todoweb-fb3c7",
+    storageBucket: "todoweb-fb3c7.appspot.com",
+    messagingSenderId: "395653716623",
+    appId: "1:395653716623:web:3165380a9f7fad48eeeefa",
+    measurementId: "G-JDWPDZ37FY"
+  };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
 
-const fetchData = async (collection = '',ref = '') => {
-    const firestore = firebase.firebase();
-    const data = await firestore.collection("your_collection").get();
-    data.forEach(doc => {
-      console.log(doc.data());
+// Fetch data from Firestore collection or collection group
+export const fetchFBData = async (collectionPath = '') => {
+  try {
+    const dataArray = [];
+    const snapshot = await getDocs(collectionGroup(firestore, collectionPath));
+    snapshot.forEach((doc) => {
+      dataArray.push({ id: doc.id, ...doc.data() });
     });
+    return dataArray;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return []; // Return empty array in case of error
   }
-  
+}
+
+// Add a document to Firestore collection
+export const addDocument = async ({collectionPath = '', name = '', date = '', cateId = ''}) => {
+  try {
+    const data = collectionPath === 'category' ? { name } : { name, date, categoryId: cateId };
+    const docRef = await addDoc(collection(firestore, collectionPath), data);
+    console.log('Document added with ID:', docRef.id);
+    return docRef.id; // Return the ID of the added document
+  } catch (error) {
+    console.error('Error adding document:', error);
+    return null; // Return null in case of error
+  }
+}
+
+export const deleteContent = async ({collectionPath = '', name = '', date = '', cateId = ''}) => {
+  const snapshot = await getDocs(collectionGroup(firestore, collectionPath));
+  snapshot.forEach(async (doc) => {
+   await deleteDoc(doc.ref);
+  })
+}

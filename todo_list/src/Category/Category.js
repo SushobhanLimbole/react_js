@@ -1,19 +1,34 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Category.css';
 import { Link } from 'react-router-dom';
-import AddButton from '../Buttons/AddButton';
+// import AddButton from '../Buttons/AddButton';
 import AddTile from '../AddTile';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { fetchFBData } from '../firebase';
 
 
 export default function Category() {
+    console.log('Category called');
 
-    const [obj, setObj] = useState([{ id: '1', name: 'Hello' }, { id: '1', name: 'Hello' }, { id: '1', name: 'Hello' }, { id: '1', name: 'Hello' }, { id: '1', name: 'Hello' }, { id: '1', name: 'Hello' }, { id: '1', name: 'Hello' }, { id: '1', name: 'Hello' }, { id: '1', name: 'Hello' }]);
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            console.log('useEffect called');
+            const newData = await fetchFBData('category');
+            setData(newData);
+        };
+        fetchData();
+    }, []);
+
+    const updateData = (newData) => {
+        setData(newData);
+    };
 
     const addTile = () => {
-        let newObj = [true, ...obj];
-        setObj(newObj);
+        let newObj = [true, ...data];
+        setData(newObj);
     }
 
     return (
@@ -23,10 +38,10 @@ export default function Category() {
             </div>
             <div className='category-tiles'>
                 {
-                    obj.map((element) => {
-                        if (element == true) {
+                    data.map((element) => {
+                        if (element === true) {
                             console.log('addtile');
-                            return <AddTile />
+                            return <AddTile collection='category' data={data} updateData={updateData} />
                         } else {
                             console.log('tile');
                             return (
@@ -35,8 +50,8 @@ export default function Category() {
                                         <h1>{element.name}</h1>
                                     </Link>
                                     <div className='icon-cate-section'>
-                                        <button className='icons' onClick={console.log('OnClick')}><span className="material-symbols-outlined">edit</span></button>
-                                        <button className='icons' onClick={console.log('OnClick')}><span className="material-symbols-outlined">delete</span></button>
+                                        <button className='icons' ><span className="material-symbols-outlined">edit</span></button>
+                                        <button className='icons' ><span className="material-symbols-outlined">delete</span></button>
                                     </div>
                                 </div>
                             );
