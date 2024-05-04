@@ -7,6 +7,14 @@
     position: relative;
 }
 
+.loading{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .tasks-title{
     height: 8.5%;
     display: flex;

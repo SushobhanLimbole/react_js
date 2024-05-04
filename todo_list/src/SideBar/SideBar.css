@@ -11,6 +11,10 @@
     justify-content: center;
 }
 
+.sidebar-anchor{
+    text-decoration: none;
+}
+
 .inside-sidebar{
     height: 98%;
     width: 94%;

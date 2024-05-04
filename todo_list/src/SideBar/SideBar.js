@@ -1,11 +1,11 @@
+import { Link } from 'react-router-dom';
 import './SideBar.css';
 
 export default function SideBar() {
     return (
         <div className="sidebar">
             <div className='inside-sidebar'>
-            
-                <h1 className='sidebar-title'>Todo-list</h1>
+                <Link to='/home' className='sidebar-anchor'><h1 className='sidebar-title'>Todo-list</h1></Link>
                 <div className='line'></div>
                 <h1 className='username'>Hello</h1>
                 <h1 className='username'>Sushobhan</h1>

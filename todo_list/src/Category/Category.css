@@ -6,6 +6,14 @@
     background-color: var(--secondary-color);
 }
 
+.loading{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .category-section a{
     text-decoration: none;
 }
@@ -83,12 +91,6 @@
     width: 10%;
     margin-right: 10px;
 }
-
-/* .icons{
-    height: 17px;
-    margin-left: 20px;
-    color: var(--primary-color);
-} */
 
 .icons{
     height: fit-content;
