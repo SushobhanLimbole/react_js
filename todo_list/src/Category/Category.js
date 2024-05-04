@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import AddTile from '../AddTile';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { fetchFBData } from '../firebase';
+import { deleteCategory, fetchFBData } from '../firebase';
 
 
 export default function Category() {
@@ -16,7 +16,7 @@ export default function Category() {
     useEffect(() => {
         const fetchData = async () => {
             console.log('useEffect called');
-            const newData = await fetchFBData('category');
+            const newData = await fetchFBData({collectionPath:'category'});
             setData(newData);
         };
         fetchData();
@@ -29,6 +29,14 @@ export default function Category() {
     const addTile = () => {
         let newObj = [true, ...data];
         setData(newObj);
+    }
+
+    const handleDelete = async (coll) => {
+        console.log('handledelte category');
+        await deleteCategory(coll);
+        const obj = await fetchFBData({collectionPath:'category'});
+        console.log('newwwwData = ', obj);
+        setData(obj);
     }
 
     return (
@@ -46,12 +54,12 @@ export default function Category() {
                             console.log('tile');
                             return (
                                 <div className='category-tile'>
-                                    <Link to={'/tasks'} className='anchor'>
+                                    <Link to={`/tasks/${element.id}`} className='anchor'>
                                         <h1>{element.name}</h1>
                                     </Link>
                                     <div className='icon-cate-section'>
                                         <button className='icons' ><span className="material-symbols-outlined">edit</span></button>
-                                        <button className='icons' ><span className="material-symbols-outlined">delete</span></button>
+                                        <button className='icons' onClick={() => handleDelete(element.id)}><span className="material-symbols-outlined">delete</span></button>
                                     </div>
                                 </div>
                             );

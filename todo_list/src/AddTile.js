@@ -1,29 +1,61 @@
 import { useState } from 'react';
 import './AddTile.css';
-import { addDocument, deleteContent, fetchFBData } from './firebase';
+import { addDocument, deleteCategory, fetchFBData } from './firebase';
+// import { useParams } from 'react-router-dom';
 
 export default function AddTile(props) {
     console.log('props = ',props);
 
     const[category,setCategory] = useState('');
-    const {collection , data , setData} = props;
+    const[taskName,setTaskName] = useState('');
+    const[taskDate,setTaskDate] = useState('');
 
     const handleCategory = (event) => {
         setCategory(event.target.value);
     }
+
     const handleCategorySubmit = async () => {
-        await addDocument({collectionPath:collection,name:category});
+        await addDocument({collectionPath:props.collection,name:category});
         console.log('before data === ',props.data);
-        const newData = await fetchFBData('category');
+        const newData = await fetchFBData({collectionPath:'category'});
         props.updateData(newData);
         console.log('end');
     }
+
     const handleCategoryDelete = async () => {
         // await deleteContent({collectionPath:collection});
-        const newData = await fetchFBData('category');
+        const newData = await fetchFBData({collectionPath:'category'});
         props.updateData(newData);
     }
-    if (true) {
+
+    const handleTaskName = (event) => {
+        setTaskName(event.target.value);
+    }
+
+    const handleTaskDate = (event) => {
+        setTaskDate(event.target.value);
+    }
+    
+
+    const handleTaskSubmit = async () => {
+        const inputValue = taskDate;
+        const [year, month, day] = inputValue.split('-');
+        const formattedDate = `${day}-${month}-${year}`;
+        await addDocument({collectionPath:props.collection,name:taskName,date:formattedDate,cateId:props.cateId});
+        console.log('before data === ',props.data);
+        const newData = await fetchFBData({collectionPath:props.collection,cateId:props.cateId});
+        props.updateData(newData);
+        console.log('end');
+    }
+
+    const handleTaskDelete = async () => {
+        // await deleteContent({collectionPath:collection});
+        const newData = await fetchFBData({collectionPath:'tasks',cateId:props.cateId});
+        console.log('taskdata === ',newData);
+        props.updateData(newData);
+    }
+
+    if (props.collection === 'category') {
         return (
             <div className='add-tile'>
                 <div className='textfield-section'>
@@ -37,10 +69,10 @@ export default function AddTile(props) {
         return (
             <div className='add-tile'>
                 <div className='textfield-section'>
-                    <input value={'hello'} type='text' placeholder='Enter Category' className='inside-add-tile' />
-                    <input value={'hello'} type='date' placeholder='Enter Category' className='inside-add-tile' />
-                    <button className='icons' ><span class="material-symbols-outlined">done</span></button>
-                    <button className='icons' ><span className="material-symbols-outlined">delete</span></button>
+                    <input value={taskName} type='text' placeholder='Enter Category' className='inside-add-tile' onChange={handleTaskName}/>
+                    <input value={taskDate} type='date' placeholder='Enter Category' className='inside-add-tile' onChange={handleTaskDate}/>
+                    <button className='icons' onClick={handleTaskSubmit}><span class="material-symbols-outlined">done</span></button>
+                    <button className='icons' onClick={handleTaskDelete}><span className="material-symbols-outlined">delete</span></button>
                 </div>
             </div>
         );

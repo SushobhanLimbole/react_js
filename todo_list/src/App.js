@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' Component={Category}/>
-          <Route path='/tasks' Component={Tasks}/>
+          <Route path='/tasks/:id' Component={Tasks}/>
         </Routes>
       </Router>
     </div>
