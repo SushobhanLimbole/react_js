@@ -13,9 +13,9 @@ export default function UpdateTile(props) {
     }
 
     const handleCategorySubmit = async () => {
-        await updateContent({collectionPath:'category',name:category,cateId:props.updateId});
+        await updateContent({collectionPath:'categories',name:category,cateId:props.updateId});
         console.log('before data === ',props.updateId);
-        const newData = await fetchFBData({collectionPath:'category'});
+        const newData = await fetchFBData({collectionPath:'categories' , userName: props.userName});
         console.log('before data === ',newData);
         props.updateData(newData);
         console.log('end');
@@ -23,7 +23,7 @@ export default function UpdateTile(props) {
 
     const handleCategoryDelete = async () => {
         // await deleteContent({collectionPath:collection});
-        const newData = await fetchFBData({collectionPath:'category'});
+        const newData = await fetchFBData({collectionPath:'categories' , userName: props.userName});
         props.updateData(newData);
     }
 
@@ -54,7 +54,7 @@ export default function UpdateTile(props) {
         props.updateData(newData);
     }
 
-    if (props.collection === 'category') {
+    if (props.collection === 'categories') {
         return (
             <div className='add-tile'>
                 <div className='textfield-section'>

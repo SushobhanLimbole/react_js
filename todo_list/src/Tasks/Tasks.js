@@ -2,17 +2,18 @@ import { useEffect, useState } from "react";
 import './Tasks.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { deleteTask, fetchFBData } from "../firebase";
+import { deleteAll, deleteTask, fetchFBData } from "../firebase";
 import AddTile from "../Tile Operations/AddTile";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import UpdateTile from "../Tile Operations/UpdateTile";
 import { CircularProgress } from "@mui/material";
-import SideBar from "../SideBar/SideBar";
+// import SideBar from "../SideBar/SideBar";
 // import AddButton from "../Buttons/AddButton";
 
 export default function Tasks() {
 
-    const { id } = useParams();
+    const { id , userName , title } = useParams();
+    const navigate = useNavigate();
 
     const [taskData, setTaskData] = useState([]);
     const [taskHolder, setHolder] = useState('');
@@ -55,52 +56,75 @@ export default function Tasks() {
         setTaskData(obj);
     }
 
+    const handleDeleteAll = async () => {
+        console.log('handleDelete called');
+        await deleteAll(updateData);
+        setTaskData([]);
+        console.log('handledelete end');
+    }
+
+    const handleLogOut = async (userName) => {
+        alert(`${userName} logged out Successfully`);
+        navigate('/', { replace: true } );
+    }
+
     return (
         <div className="main-section">
-            <SideBar/>
-            <div className="tasks-section">
-            <div className='tasks-title'>
-                <h1>Tasks</h1>
-            </div>
-            {
-                loading ? (
-                    <div className='loading'>
-                        <CircularProgress color="secondary" size={60} thickness={5} />
+            <div className="sidebar">
+                <div className='inside-sidebar'>
+                    <Link to={`/category/${userName}`} className='sidebar-anchor'><h1 className='sidebar-title'>Todo-list</h1></Link>
+                    <div className='line'></div>
+                    <h1 className='username'>Hello</h1>
+                    <h1 className='username'>{userName}</h1>
+                    <div className="sidebar-footer">
+                        <button className='sidebar-tile' onClick={handleDeleteAll}>Delete all</button>
+                        <button className='sidebar-tile' id='logout' onClick={() => handleLogOut(userName)}>Logout</button>
                     </div>
-
-                ) : (
-                    <>
-                        <div className='tasks-tiles'>
-                            {
-                                taskData.map((element, index) => {
-                                    if (element === 'add') {
-                                        console.log('addtile');
-                                        return <AddTile collection='tasks' data={taskData} updateData={updateData} cateId={id} />
-                                    } else if (element === 'update') {
-                                        console.log('addtile');
-                                        return <UpdateTile collection='tasks' data={taskData} updateData={updateData} cateId={id} taskHolder={taskHolder} updateId={updateId} />
-                                    } else {
-                                        return (
-                                            <button className='tasks-tile'>
-                                                <div className="tile-title">
-                                                    <h2>{element.title}</h2>
-                                                    <p>{element.date}</p>
-                                                </div>
-                                                <div className='icon-cate-section'>
-                                                    <button className="icons" onClick={() => updateTile(index)}><span className="material-symbols-outlined">edit</span></button>
-                                                    <button className="icons" onClick={() => handleDelete(element.id)}><span className="material-symbols-outlined">delete</span></button>
-                                                </div>
-                                            </button>
-                                        );
-                                    }
-                                })
-                            }
+                </div>
+            </div>
+            <div className="tasks-section">
+                <div className='tasks-title'>
+                    <h1>{title}</h1>
+                </div>
+                {
+                    loading ? (
+                        <div className='loading'>
+                            <CircularProgress color="secondary" size={60} thickness={5} />
                         </div>
-                        <button className="add-button" onClick={addTile}><FontAwesomeIcon icon={faPlus} className="add-icon" /></button>
-                    </>
-                )
-            }
-        </div>
+
+                    ) : (
+                        <>
+                            <div className='tasks-tiles'>
+                                {
+                                    taskData.map((element, index) => {
+                                        if (element === 'add') {
+                                            console.log('addtile');
+                                            return <AddTile collection='tasks' data={taskData} updateData={updateData} cateId={id} />
+                                        } else if (element === 'update') {
+                                            console.log('addtile');
+                                            return <UpdateTile collection='tasks' data={taskData} updateData={updateData} cateId={id} taskHolder={taskHolder} updateId={updateId} />
+                                        } else {
+                                            return (
+                                                <button className='tasks-tile'>
+                                                    <div className="tile-title">
+                                                        <h2>{element.title}</h2>
+                                                        <p>{element.date}</p>
+                                                    </div>
+                                                    <div className='icon-cate-section'>
+                                                        <button className="icons" onClick={() => updateTile(index)}><span className="material-symbols-outlined">edit</span></button>
+                                                        <button className="icons" onClick={() => handleDelete(element.id)}><span className="material-symbols-outlined">delete</span></button>
+                                                    </div>
+                                                </button>
+                                            );
+                                        }
+                                    })
+                                }
+                            </div>
+                            <button className="add-button" onClick={addTile}><FontAwesomeIcon icon={faPlus} className="add-icon" /></button>
+                        </>
+                    )
+                }
+            </div>
         </div>
     );
 }

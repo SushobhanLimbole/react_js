@@ -5,7 +5,7 @@ import Tasks from './Tasks/Tasks';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Category from './Category/Category';
 import LoginPage from './LoginPage/LoginPage';
-import Home from './Home';
+// import Home from './Home';
 
 function App() {
   console.log('App called');
@@ -14,8 +14,8 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' Component={LoginPage}/>
-          <Route path='/home' Component={Home}/>
-          <Route path='/tasks/:id' Component={Tasks}/>
+          <Route path='/category/:userName' Component={Category}/>
+          <Route path='/tasks/:id/:userName/:title' Component={Tasks}/>
         </Routes>
       </Router>
     </>
