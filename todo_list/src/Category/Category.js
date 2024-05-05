@@ -64,9 +64,9 @@ export default function Category() {
         console.log('handledelete end');
     }
 
-    const handleLogOut = async (userName) => {
+    const handleLogOut = (userName) => {
         alert(`${userName} logged out Successfully`);
-        navigate('/', { replace: true } );
+        navigate('/', { replace : true } );
     }
 
     return (

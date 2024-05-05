@@ -11,13 +11,13 @@ import { addDoc, collection, collectionGroup, deleteDoc, doc, getDocs, getFirest
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAmQ9nTGIvMrFFBeWcO0gb9QSpbvBD_CX8",
-  authDomain: "todoweb-fb3c7.firebaseapp.com",
-  projectId: "todoweb-fb3c7",
-  storageBucket: "todoweb-fb3c7.appspot.com",
-  messagingSenderId: "395653716623",
-  appId: "1:395653716623:web:3165380a9f7fad48eeeefa",
-  measurementId: "G-JDWPDZ37FY"
+  apiKey: "AIzaSyAtmFmqjIesPq37O_wpZZED1GxLo-1Z9ZE",
+  authDomain: "todoapp-28895.firebaseapp.com",
+  projectId: "todoapp-28895",
+  storageBucket: "todoapp-28895.appspot.com",
+  messagingSenderId: "526759731809",
+  appId: "1:526759731809:web:1bab48ab3f6ee3e23ec020",
+  measurementId: "G-7B5Q2F3340"
 };
 
 // Initialize Firebase
@@ -74,7 +74,7 @@ export const addUser = async (user) => {
 // Add a document to Firestore collection
 export const addDocument = async ({ collectionPath = '', name = '', date = '', cateId = '', userName=''}) => {
   try {
-    const data = collectionPath === 'categories' ? { name:name , timestamp: serverTimestamp() , userName:userName} : { title: name, date: date, categoryId: cateId };
+    const data = collectionPath === 'categories' ? { name:name , timestamp: serverTimestamp() , userName:userName} : { title: name, date: date, categoryId: cateId, isCompleted:false};
     const docRef = await addDoc(collection(firestore, collectionPath), data);
     console.log('Document added with ID:', docRef.id);
     return docRef.id; // Return the ID of the added document
@@ -141,4 +141,10 @@ export const updateContent = async ({ collectionPath = '', name = '', date = '',
   }
 }
 
+export const updateChecked = async ( {isCompleted = '' , taskId = ''}) => {
 
+    console.log('update checked called');
+    const tasksCollection = doc(firestore, 'tasks', taskId);
+    await updateDoc(tasksCollection, { isCompleted: isCompleted });
+  
+}

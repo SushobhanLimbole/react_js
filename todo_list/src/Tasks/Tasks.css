@@ -15,6 +15,76 @@
     align-items: center;
 }
 
+.sidebar{
+    width: 20.25%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1.5px solid black;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-anchor{
+    text-decoration: none;
+}
+
+.inside-sidebar{
+    height: 98%;
+    width: 94%;
+    position: relative;
+}
+
+.inside-sidebar h1{
+    font-family: "Jost",sans-serif;
+}
+
+.sidebar-title{
+    margin-top: 5px;
+    font-weight: 200;
+    color: white;
+}
+
+.line{
+    height: 0.5px;
+    width: 93%;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.username{
+    font-size: 280%;
+    font-family: 'Jost',sans-serif;
+    font-weight: 500;
+}
+
+.sidebar-footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sidebar-tile{
+    height: 45px;
+    width: 100%;
+    font-size: large;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: 'Jost',sans-serif;
+    background-color: white;
+}
+
+#logout{
+    color: red;
+}
+
 .tasks-title{
     height: 8.5%;
     display: flex;
@@ -48,7 +118,7 @@
 .tasks-tile{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 80px;
     width: 98.5%;
     border-radius: 10px;
@@ -70,8 +140,74 @@
     color: var(--primary-color);
 }
 
+.tasks-tile-checked{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    width: 98.5%;
+    border-radius: 10px;
+    border: 0.1px solid black;
+    margin-bottom: 15px;
+    padding: 0px;
+    box-shadow: 0px 4px 4px #00000020;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: grey;
+}
+
+.tasks-tile-checked h2{
+    font-size: 30px;
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: black;
+    text-decoration: line-through;
+}
+
+.tile-title-checked{
+    /* background-color: red; */
+    width: 80%;
+    /* margin-left: 13px; */
+    text-align: start;
+}
+
+.tile-title-checked p{
+    font-size: small;
+    color: black;
+    text-decoration: line-through;
+}
+
+.icon-task-section-checked{
+    width: 10%;
+    margin-right: 10px;
+    padding-right: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.icons-checked{
+    height: fit-content;
+    padding: 9px 9px;
+    border: none;
+    margin-left: 10px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.icons-checked:hover{
+    background-color: var(--secondary-color);
+}
+
 .tile-title{
-    margin-left: 13px;
+    /* background-color: red; */
+    width: 80%;
+    /* margin-left: 13px; */
     text-align: start;
 }
 
@@ -80,22 +216,35 @@
     color: black;
 }
 
-.icon-cate-section{
+.icon-task-section{
     width: 10%;
     margin-right: 10px;
+    padding-right: 48px;
+    display: flex;
+    align-items: center;
 }
-
-/* .icons{
-    height: 17px;
-    margin-left: 30px;
-    color: var(--primary-color);
-} */
 
 .icons{
     height: fit-content;
+    padding: 9px 9px;
     border: none;
-    margin-left: 20px;
+    margin-left: 10px;
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.icons:hover{
+    background-color: var(--secondary-color);
+}
+
+.checkbox{
+    margin-left: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .add-button{
@@ -107,8 +256,8 @@
     bottom: 25px;
     right: 25px;
     color: white;
-    /* background-color: rgb(232, 143, 244); */
     background-color: var(--primary-color);
     border: 0.01px solid #00000020;
     box-shadow: 0px 0px 5px #00000068;
 }
+

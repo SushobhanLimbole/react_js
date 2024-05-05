@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 import loginimg from '../images/login-bg.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { addUser, checkUser } from '../firebase';
 // import { useHistory } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ export default function LoginPage() {
 
     const [userName, setUserName] = useState('');
     const navigate = useNavigate();
-
+    
     const handleUserName = (event) => {
         setUserName(event.target.value);
     }

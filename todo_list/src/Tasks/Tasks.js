@@ -2,23 +2,25 @@ import { useEffect, useState } from "react";
 import './Tasks.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { deleteAll, deleteTask, fetchFBData } from "../firebase";
+import { deleteAll, deleteTask, fetchFBData, updateChecked } from "../firebase";
 import AddTile from "../Tile Operations/AddTile";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import UpdateTile from "../Tile Operations/UpdateTile";
-import { CircularProgress } from "@mui/material";
+import { Checkbox, CircularProgress } from "@mui/material";
+import { purple } from "@mui/material/colors";
 // import SideBar from "../SideBar/SideBar";
 // import AddButton from "../Buttons/AddButton";
 
 export default function Tasks() {
 
-    const { id , userName , title } = useParams();
+    const { id, userName, title } = useParams();
     const navigate = useNavigate();
 
     const [taskData, setTaskData] = useState([]);
     const [taskHolder, setHolder] = useState('');
     const [updateId, setId] = useState('');
     const [loading, setLoading] = useState(true);
+    // const [checked, setChecked] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -56,6 +58,16 @@ export default function Tasks() {
         setTaskData(obj);
     }
 
+    const handleChecked = async (isCompleted, taskId) => {
+        isCompleted = !isCompleted;
+        console.log('handle checked called ', isCompleted);
+        await updateChecked({ isCompleted: isCompleted, taskId: taskId });
+        console.log('before data === ', taskData);
+        const newData = await fetchFBData({ collectionPath: 'tasks', cateId: id });
+        setTaskData(newData);
+        console.log('end');
+    }
+
     const handleDeleteAll = async () => {
         console.log('handleDelete called');
         await deleteAll(updateData);
@@ -63,9 +75,9 @@ export default function Tasks() {
         console.log('handledelete end');
     }
 
-    const handleLogOut = async (userName) => {
+    const handleLogOut = (userName) => {
         alert(`${userName} logged out Successfully`);
-        navigate('/', { replace: true } );
+        navigate('/', { replace: true });
     }
 
     return (
@@ -105,17 +117,38 @@ export default function Tasks() {
                                             return <UpdateTile collection='tasks' data={taskData} updateData={updateData} cateId={id} taskHolder={taskHolder} updateId={updateId} />
                                         } else {
                                             return (
-                                                <button className='tasks-tile'>
-                                                    <div className="tile-title">
-                                                        <h2>{element.title}</h2>
-                                                        <p>{element.date}</p>
-                                                    </div>
-                                                    <div className='icon-cate-section'>
-                                                        <button className="icons" onClick={() => updateTile(index)}><span className="material-symbols-outlined">edit</span></button>
-                                                        <button className="icons" onClick={() => handleDelete(element.id)}><span className="material-symbols-outlined">delete</span></button>
-                                                    </div>
-                                                </button>
+                                                <>
+                                                    <button className='tasks-tile'>
+                                                        <div className="tile-title">
+                                                            <h2>{element.title}</h2>
+                                                            <p>{element.date}</p>
+                                                        </div>
+                                                        <div className='icon-task-section'>
+                                                            <button className="icons" onClick={() => updateTile(index)}><span className="material-symbols-outlined">edit</span></button>
+                                                            <button className="icons" onClick={() => handleDelete(element.id)}><span className="material-symbols-outlined">delete</span></button>
+                                                            <div className="checkbox"><Checkbox checked={element.isCompleted} onChange={() => handleChecked(element.isCompleted, element.id)} sx={{
+                                                                color: purple,
+                                                                marginRight: '10px',
+                                                                transition: 'background-color 0.3s ease-in', // Set color to violet when enabled
+                                                                '&:hover': {
+                                                                    backgroundColor: 'rgba(208, 205, 236, 1)',
+                                                                },
+                                                                '&.Mui-checked': {
+                                                                    color: 'inherit', // Keep color when checked
+                                                                    '&:hover': {
+                                                                        backgroundColor: 'rgba(208, 205, 236, 1)', // Remove hover background color
+                                                                    },
+                                                                    '&.Mui-focusVisible': {
+                                                                        outline: '2px solid black', // Set outline to black when focused
+                                                                    },
+                                                                },
+                                                            }} /></div>
+                                                        </div>
+                                                    </button>
+                                                </>
+
                                             );
+
                                         }
                                     })
                                 }
