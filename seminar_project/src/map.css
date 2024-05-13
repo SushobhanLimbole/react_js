@@ -1,0 +1,19 @@
+path {
+    cursor: pointer;
+    fill: #DBE3EA;
+    stroke: #FFFFFF;
+    stroke-linejoin: round;
+  }
+  
+  path:hover{
+    fill: #8095b6;
+    stroke: #0058a5;
+  }
+  
+  path.selected{
+    fill:#0058a5 !important;
+  }
+  
+  .regione{
+    transition: all 300ms ease-in-out;
+  }
