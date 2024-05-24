@@ -5,7 +5,7 @@
   border: 0.1rem solid rgba(72, 67, 67, 0.288);
   box-sizing: border-box;
   box-shadow: 0rem 0rem 1rem 0rem rgba(72, 67, 67, 0.288);
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
 }
 
 .content img {
@@ -18,7 +18,8 @@
 }
 
 .content:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
+  box-shadow: 0rem 0rem 2rem 0rem rgba(72, 67, 67, 0.288);
 }
 
 .content-name {
@@ -39,10 +40,11 @@
 .content-name p {
   text-align: start;
   color: #5d646b;
-  height: 40%;
+  height: 45%;
   width: calc(100% - 2rem);
   font-size: 1.3rem;
   overflow: hidden;
+  
 }
 
 .content-name h3 {

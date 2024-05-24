@@ -1,0 +1,20 @@
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.326);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+}
+
+.carousel-label{
+    font-family: 'Jost',sans-serif;
+    font-size: 3.5rem;
+}
+
+.carousel-capt{
+    font-family: 'Jost' , sans-serif;
+    margin-bottom: 10px;
+}

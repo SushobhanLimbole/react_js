@@ -1,0 +1,58 @@
+.hero-section {
+  width: 100% !important;
+  height: 91vh !important;
+}
+
+.state-banner {
+  height: 40rem; /* 400px converted to REM */
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  background-image: url(https://tourismmedia.italia.it/is/image/mitur/fallback-background?wid=2880&hei=1280&fit=constrain,1&fmt=webp);
+}
+
+.state-banner h1 {
+  width: 70%;
+  font-size: 4rem; /* 40px converted to REM */
+  font-family: "Montserrat", sans-serif;
+}
+
+.info-section{
+  height: 80vh;
+  width: 70%;
+  margin: auto;
+  margin-top: 8%;
+  padding: 2% 0%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-text{
+  width: 50%;
+}
+
+.info-text h1{
+  font-size: 5.7rem;
+  font-family: 'Jost';
+}
+
+.info-text h3{
+  margin-top: 6.5%;
+  font-size: 2.6rem;
+  font-weight: 400;
+  font-family: 'Jost';
+  word-spacing: 0.3rem;
+  color: rgba(0, 0, 0, 0.628);
+}
+
+.info-pic {
+  height: 90%;
+  width: 35%;
+  object-fit: cover;
+  border-radius: 2rem;
+}

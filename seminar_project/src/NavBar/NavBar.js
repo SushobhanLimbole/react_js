@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
-import logo from '../assets/logo1.png';
+import logo from '../assets/logo2.png';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,37 +12,38 @@ export default function Navbar() {
 
     return (
         <nav className="navbar">
+            <Link to="/">
             <div className="navbar-logo" style={{
-                height: '5.5rem',
-                width: '5.5rem',
-                marginLeft: '1rem',
+                // height: '5.5rem',
+                // width: '5.5rem',
                 backgroundImage: `url(${logo})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
-                // backgroundColor:'red'
             }}></div>
+            </Link>
+            
             <div className={isOpen ? 'nav-menu active' : 'nav-menu'}>
                 <div className="nav-item">
-                    <Link to="/home" className="nav-link">Home</Link>
+                    <Link to="/" className="nav-link">Home</Link>
                 </div>
                 <div className="nav-item">
                     <Link to="/state" className="nav-link">Where to Go</Link>
                 </div>
                 <div className="nav-item">
-                    <Link to="/what-to-do" className="nav-link">What to Do</Link>
+                    <Link to="/sites" className="nav-link">What to Do</Link>
                 </div>
                 <div className="nav-item">
                     <Link to="/information" className="nav-link">Information</Link>
                 </div>
                 <div className="nav-item">
-                <span class="material-symbols-outlined nav-link" id='account'>
+                <span className="material-symbols-outlined nav-link" id='account'>
                     account_circle
                 </span>
                 </div>
                 
             </div>
             <div className="menu-icon" onClick={toggleMenu}>
-                <i className={isOpen ? 'material-icons' : 'material-icons-outlined'}>{isOpen ? 'close' : (<span class="material-symbols-outlined">
+                <i className={isOpen ? 'material-icons' : 'material-icons-outlined'}>{isOpen ? 'close' : (<span className="material-symbols-outlined">
                     more_vert
                 </span>)}</i>
             </div>

@@ -38,6 +38,24 @@
 
 html{
     scrollbar-width: none;
-    scroll-behavior:smooth ;
+    scroll-behavior:smooth;
     font-size: 62.5%;
 }
+
+/* ::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 5px;
+} */
+
+/* ::-webkit-scrollbar-track {
+  background-image: url(sky.webp);
+} */
+
+/* ::-webkit-scrollbar-thumb {
+  background-color: #968c8c5d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c770f0;
+} */

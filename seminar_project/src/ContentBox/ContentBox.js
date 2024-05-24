@@ -1,16 +1,18 @@
 import './ContentBox.css';
-import content from '../assets/collo.jpg';
 
-export default function ContentBox() {
+export default function ContentBox(props) {
+  console.log('content box called');
+
+  console.log('bhjbjdxbvbjsbdjvbjb',props.contentData.image);
     return (
         <div className="content">
-          <img src={content} />
+          <img src={props.contentData.image} />
           <div className="content-name">
-            <h1>Castel del Monte</h1>
-            <p> is a 13th-century citadel and castle situated on a hill in Andria in the Apulia region of southeast Italy. It was built during the 1240s by King Frederick II</p>
+            <h1>{props.contentData.title}</h1>
+            <p>{props.contentData.para}</p>
             <h3><span class="material-symbols-outlined location-on">
               location_on
-            </span>Lazio,Rome</h3>
+            </span>{props.contentData.loc}</h3>
           </div>
         </div>
     );

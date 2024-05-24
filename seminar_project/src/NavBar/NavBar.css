@@ -4,29 +4,38 @@
   justify-content: space-between;
   align-items: center;
   font-family: "Jost";
-  position: sticky;
+  position: sticky !important;
   top: 0%;
-  z-index: 1;
+  z-index: 2;
   font-size: 2rem;
   backdrop-filter: blur(0.63rem);
   /* background-color: var(--primary-color); */
   /* color: white; */
   color: var(--primary-color);
   background-color: #ffffff5d;
-  padding: 1rem;
+  /* padding: 5rem; */
   border-bottom: 0.01rem solid rgba(128, 128, 128, 0.224);
   overflow: auto;
+}
+
+.navbar-logo{
+  height: 4.5rem;
+  width: 4.5rem;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
   padding: 0;
-  margin-right: 2rem;
+  /* margin-right: 0.5rem; */
 }
 
 .nav-item {
-  margin-right: 2rem; /* 10px */
+  margin-right: 4rem; /* 10px */
+  font-weight: 450;
 }
 
 .nav-link {
@@ -36,12 +45,13 @@
   text-decoration: none;
   padding: 0.5rem 1rem; /* 5px 10px */
   transition: color 0.3s ease;
+  font-weight: bold;
 }
 
 .nav-link:hover {
-  color: var(--hover-color);
-  color: #0058a5;
-  padding: 0.5rem 1rem;
+  /* color: var(--hover-color); */
+  color: #0058a5 !important;
+  /* padding: 0.5rem 1rem; */
 }
 
 #account{

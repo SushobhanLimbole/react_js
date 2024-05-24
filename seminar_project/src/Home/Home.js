@@ -1,24 +1,53 @@
 import "./Home.css";
-import heroSection from "../assets/bg.jpg";
-import { Link } from "react-router-dom";
 import NavBar from '../NavBar/NavBar';
+import ItalyMap from "../ItalyMap/ItalyMap";
+import CarouselSlider from "../CarouselSlider/CarouselSlider";
+import { foodNavContent } from "./nav_content";
+import { useState } from "react";
 import ContentBox from "../ContentBox/ContentBox";
-import ItalyMap from "../ItalyMap";
-import content from '../assets/bg.jpg';
+import UNESCONav from "../NavContent/UNESCONav";
+import CastlesNav from "../NavContent/CastlesNav";
 
 
 export default function Home() {
+
+  const [content, setContent] = useState(1);
+
+  const changeUNESCO = () => {
+    setContent(1);
+  }
+
+  const changeCastles = () => {
+    setContent(2);
+  }
+
+  const changeFood = () => {
+    setContent(3);
+  }
+
+  const renderContent = () => {
+    switch (content) {
+      case 1:
+        return <UNESCONav />
+      case 2:
+        return <CastlesNav />;
+      case 3:
+        return (<div className="unmissable-sites-content inner-container">
+          {
+            foodNavContent.map((data) => (
+              <ContentBox contentData={data} />
+            ))
+          }
+        </div>);
+      default:
+        return <UNESCONav />;
+    }
+  };
+
   return (
     <>
       <NavBar />
-      <div
-        className="hero-section"
-        style={{
-          backgroundImage: `url(${heroSection})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      ></div>
+      <CarouselSlider />
 
       <div className="quote-banner">
         <h1>
@@ -34,18 +63,15 @@ export default function Home() {
       </div>
 
       <div className="dest-bar inner-container">
-        <Link to='/content' className="nav-links"><h2>UNESCO sites</h2><div className="underline"></div></Link>
-        <Link className="nav-links"><h2>Castles</h2><div className="underline"></div></Link>
-        <Link className="nav-links"><h2>Food and wine</h2><div className="underline"></div></Link>
+        <button onClick={changeUNESCO} className="nav-links"><h2>UNESCO sites</h2><div className="underline"></div></button>
+        <button onClick={changeCastles} className="nav-links"><h2>Castles</h2><div className="underline"></div></button>
+        <button onClick={changeFood} className="nav-links"><h2>Food</h2><div className="underline"></div></button>
       </div>
-      <div className="unmissable-content inner-container">        
-      <ContentBox/>
-      <ContentBox/>
-      <ContentBox/>
-      <ContentBox/>
-      <ContentBox/>
-      <ContentBox/>
-      </div>
+
+      {
+        renderContent()
+      }
+
 
       <div class="map-before">
         <h3>ITALY</h3>
@@ -53,7 +79,7 @@ export default function Home() {
       </div>
 
       <div className="map-section inner-container">
-        <ItalyMap/>
+        <ItalyMap />
         <div className="map-content">
           <img src={content} />
           <div className="map-content-name">
