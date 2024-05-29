@@ -14,6 +14,11 @@ export default function ContentBox(props) {
               location_on
             </span>{props.contentData.loc}</h3>
           </div>
+          {/* <div className='overlay-bg' ></div>
+          <div className='overlay-content' >
+          <h1>{props.contentData.title}</h1>
+            <p>{props.contentData.para}</p>
+          </div> */}
         </div>
     );
 }

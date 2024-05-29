@@ -6,7 +6,7 @@
   font-family: "Jost";
   position: sticky !important;
   top: 0%;
-  z-index: 2;
+  z-index: 3;
   font-size: 2rem;
   backdrop-filter: blur(0.63rem);
   /* background-color: var(--primary-color); */

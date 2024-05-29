@@ -80,13 +80,13 @@ export default function Home() {
 
       <div className="map-section inner-container">
         <ItalyMap />
-        <div className="map-content">
+        {/* <div className="map-content">
           <img src={content} />
           <div className="map-content-name">
             <h1>Acosta Valley</h1>
             <p> is a 13th-century citadel and castle situated on a hill in Andria in the Apulia region of southeast Italy. It was built during the 1240s by King Frederick II</p>
           </div>
-        </div>
+        </div> */}
       </div>
       <footer>
         <h1>Footer section</h1>

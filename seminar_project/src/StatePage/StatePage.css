@@ -23,11 +23,11 @@
 
 .info-section{
   height: 80vh;
-  width: 70%;
+  width: 80%;
   margin: auto;
   margin-top: 8%;
+  margin-bottom: 15%;
   padding: 2% 0%;
-  /* background-color: red; */
   display: flex;
   justify-content: space-around;
 }
@@ -51,7 +51,7 @@
 }
 
 .info-pic {
-  height: 90%;
+  height: 100%;
   width: 35%;
   object-fit: cover;
   border-radius: 2rem;
