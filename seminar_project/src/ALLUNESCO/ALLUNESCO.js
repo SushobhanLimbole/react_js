@@ -1,5 +1,6 @@
 import Navbar from '../NavBar/NavBar';
 import heroSection from '../assets/Italy/henrique-ferreira-RKsLQoSnuTc-unsplash.jpg';
+import smallSection from '../assets/all_unesco/31_villa_tivoli.jpg';
 import './ALLUNESCO.css';
 import ContentBox1 from '../ContentBox/ContentBox1';
 import { unescoSlides } from './UnescoSlides';
@@ -26,23 +27,21 @@ export default function ALLUNESCO() {
 
             <div className="state-banner">
                 <h1>
-                    Landscapes that will take your breath away, rich history, and
-                    delicious food, your trip to Italy will be nothing short of
-                    unforgettable.
+                Discover Italy's UNESCO World Heritage Sites, where timeless beauty and cultural wonders come together in a journey through history.
                 </h1>
             </div>
 
             <div className='info-section'>
                 <div className='info-text'>
-                    <h1>Explore the Timeless Allure of Lazio</h1>
-                    <h3>Step into a realm where the echoes of ancient civilizations resonate alongside the vibrant pulse of contemporary life. Welcome to Lazio, a region nestled in the heart of Italy, where the past and present converge in a mesmerizing fusion of history, culture, and natural beauty. From the storied streets of Rome to the tranquil countryside, Lazio beckons travelers to embark on an unforgettable odyssey through the ages.</h3>
+                    <h1>Discover Italy's UNESCO World Heritage Sites</h1>
+                    <h3>Explore the unparalleled beauty and cultural richness of Italy's UNESCO World Heritage Sites, from the ancient ruins of Rome's Historic Centre to the stunning landscapes of the Dolomites. Each site tells a unique story, offering a captivating journey through Italy's diverse history and heritage. Embark on an unforgettable adventure and experience the timeless wonders that make Italy truly extraordinary.</h3>
                 </div>
-                <img className='info-pic' src={heroSection} />
+                <img className='info-pic' src={smallSection} />
             </div>
 
             <div className="destinations">
                 <h3>Unmissable places</h3>
-                <h1>What to see in Lazia</h1>
+                <h1>Italy's Stunning UNESCO Sites</h1>
             </div>
 
             <div className="unmissable-sites-content inner-container">

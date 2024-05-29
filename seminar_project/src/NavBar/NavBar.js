@@ -30,7 +30,7 @@ export default function Navbar() {
                     <Link to="/state" className="nav-link">Where to Go</Link>
                 </div>
                 <div className="nav-item">
-                    <Link to="/sites" className="nav-link">What to Do</Link>
+                    <Link to="/unesco" className="nav-link">What to Do</Link>
                 </div>
                 <div className="nav-item">
                     <Link to="/information" className="nav-link">Information</Link>
