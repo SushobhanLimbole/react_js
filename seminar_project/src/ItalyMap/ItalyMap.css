@@ -19,5 +19,56 @@ path.selected {
   transition: all 300ms ease-in-out;
 }
 
+.map-content {
+  height: 42rem; /* 70px converted to REM */
+  width: 45rem; /* 325px converted to REM */
+  border-radius: 1rem; /* 10px converted to REM */
+  /* border: 0.1rem solid rgba(72, 67, 67, 0.288); */
+  box-sizing: border-box;
+  box-shadow: 0rem 2rem 4rem 0rem rgba(0, 0, 0, 0.105);
+  /* transition: all 0.5s ease; */
+  text-decoration: none;
+}
 
+.anchor{
+  text-decoration: none;
+  color: inherit;
+}
+
+.map-content img {
+  height: 70%;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+}
+
+
+.map-content-name {
+  font-family: "Montserrat";
+  text-align: left;
+  height: 30%;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+}
+
+.map-content-name h1 {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.map-content-name p {
+  text-align: start;
+  color: #5d646b;
+  height: 40%;
+  width: calc(100% - 2rem);
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-decoration: none;
+}
 

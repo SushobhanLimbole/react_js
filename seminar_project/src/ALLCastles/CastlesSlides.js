@@ -41,7 +41,7 @@ export const allCastlesSlides = [
     },
     {
         image: pic4,
-        title: "Castelvecchio",
+        title: "Castel vecchio",
         loc:" Verona,Italy",
         para: "A formidable medieval fortress, Castelvecchio in Verona houses a museum showcasing a vast collection of art, sculptures, and historical artifacts from the city's past.",
     },
@@ -113,7 +113,7 @@ export const allCastlesSlides = [
     },
     {
         image: pic16,
-        title: "Castelvecchio,Brescia",
+        title: "Castel vecchio,Brescia",
         loc:" Lombardy,Italy",
         para: "Castelvecchio in Brescia is a historic castle with impressive fortifications, now hosting cultural events and offering panoramic city views.",
     },
@@ -147,4 +147,19 @@ export const allCastlesSlides = [
         loc:" Calabria,Italy",
         para: "The Santuario di Santa Maria dell'Isola in Tropea is perhaps the most famous of them all. The particular combination of emerald-green water, white sand, blue sky and the little church on its rocky perch is irresistible.",
     },
+];
+
+export const castleSlider = [
+    {
+        slides: [allCastlesSlides[0],allCastlesSlides[1],allCastlesSlides[2],allCastlesSlides[3],allCastlesSlides[4],allCastlesSlides[5]]
+    },
+    {
+        slides: [allCastlesSlides[6],allCastlesSlides[7],allCastlesSlides[8],allCastlesSlides[9],allCastlesSlides[10],allCastlesSlides[11]]
+    },
+    {
+        slides: [allCastlesSlides[12],allCastlesSlides[13],allCastlesSlides[14],allCastlesSlides[15],allCastlesSlides[16],allCastlesSlides[17]]
+    },
+    {
+        slides: [allCastlesSlides[18],allCastlesSlides[19],allCastlesSlides[20]]
+    }
 ];

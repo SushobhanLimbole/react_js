@@ -186,7 +186,7 @@ function ItalyMap() {
 				x="0px" y="0px" width="560.512px" height="663.114px" viewBox="0 0 560.512 663.114" enable-background="new 0 0 560.512 663.114"
 			>
 				<g>
-					<Link to={`/state/${statesInfo[13]}`} state={statesInfo[13]}><path onMouseEnter={handleMousePiedmont} className="regione" data-id-regione="6" data-nome-regione="Piemonte" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M79.634,47.228
+					<Link to={`/state/${statesInfo[13].name.toLowerCase()}`} state={statesInfo[13]}><path onMouseEnter={handleMousePiedmont} className="regione" data-id-regione="6" data-nome-regione="Piemonte" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M79.634,47.228
 		c1.592-1.213,3.004-2.87,5.694-2.251c0.204,3.029,0.987,6.042-1.072,8.84c-0.295,0.402-0.527,1.177-0.337,1.551
 		c0.756,1.488,1.413,3.207,2.619,4.244c2.057,1.769,3.585,3.814,4.746,6.197c0.833,1.71,2.272,2.474,4.044,2.602
 		c1.946,3.362,1.325,6.248-1.105,8.909c-0.576,0.63-1.064,1.351-1.691,1.921c-1.67,1.517-2.377,3.356-2.148,5.596
@@ -229,7 +229,7 @@ function ItalyMap() {
 		c0.564-0.04,1.194-0.098,1.826-0.128c2.655-0.128,4.455-1.762,4.585-4.407c0.078-1.575,0.43-2.572,2.139-3.174
 		c4.881-1.721,5.832-6.611,2.152-10.334c-0.197-0.199-0.354-0.439-0.541-0.674c0.393-1.074,1.015-1.797,2.265-1.773
 		c1.487,0.029,2.394-0.792,3.204-1.986c0.623-0.917,1.501-1.724,2.415-2.37C80.403,50.028,80.435,50.073,79.634,47.228z"/></Link>
-					<Link to={`/state/${statesInfo[0]}`} state={statesInfo[10]}><path onMouseEnter={handleMouseLombardy} fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="5" data-nome-regione="Lombardia" stroke-width="1" stroke-miterlimit="10" d="M126.741,153.644
+					<Link to={`/state/${statesInfo[10].name.toLowerCase()}`} state={statesInfo[10]}><path onMouseEnter={handleMouseLombardy} fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="5" data-nome-regione="Lombardia" stroke-width="1" stroke-miterlimit="10" d="M126.741,153.644
 		c-0.845,1.202-1.487,2.236-2.252,3.17c-0.825,1.006-1.056,1.861-0.162,3.018c0.755,0.977,1.188,2.185,0.294,3.623
 		c-0.537-0.081-1.158-0.256-1.775-0.246c-0.622,0.01-1.241,0.204-2.058,0.352c0.063-2.255,0.047-4.156-1.438-6.147
 		c-1.379-1.85-2.665-2.961-4.808-2.987c-0.842-3.786-0.842-3.786-4.262-5.291c-0.152-3.947-0.152-3.947-2.934-5.392
@@ -275,7 +275,7 @@ function ItalyMap() {
 		c-1.247-0.259-2.236-0.394-2.567-1.904c-0.595-2.712-1.15-2.855-3.596-1.465c-0.978-0.456-1.941-0.905-3.13-1.459
 		c-0.199,1.018-0.321,1.639-0.467,2.389c-0.665,0.151-1.374,0.375-2.099,0.467c-3.276,0.415-4.903,2.655-5.827,5.47
 		c-0.86,2.62-1.564,5.235-3.655,7.255c-1.016,0.981-0.19,1.946,0.597,2.672C124.663,152.02,125.631,152.738,126.741,153.644z"/></Link>
-					<Link to={`/state/${statesInfo[6]}`} state={statesInfo[6]}><path onMouseEnter={handleMouseEmilia}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="29" data-nome-regione="Emilia-Romagna" stroke-width="1" stroke-miterlimit="10" d="M228.77,148.336
+					<Link to={`/state/${statesInfo[6].name.toLowerCase()}`} state={statesInfo[6]}><path onMouseEnter={handleMouseEmilia}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="29" data-nome-regione="Emilia-Romagna" stroke-width="1" stroke-miterlimit="10" d="M228.77,148.336
 		c1.604,1.238,2.717,2.736,4.053,2.972c1.856,0.328,3.982,0.13,5.655-1.236c0.809-0.66,1.591-1.354,2.425-1.979
 		c2.211-1.657,4.715-2.656,7.449-2.061c2.459,0.535,4.851,0.31,7.283,0.167c0.451-0.027,1.096-0.1,1.336,0.151
 		c2.526,2.638,5.72,1.222,8.833,1.571c0.384,1.806,0.808,3.663-0.393,5.499c-0.231,0.353-0.247,0.864-0.305,1.309
@@ -316,7 +316,7 @@ function ItalyMap() {
 		c0.166,0.062,0.475,0.119,0.477,0.187c0.091,2.305,1.409,3.378,3.547,3.901c1.268,0.311,2.417,1.082,3.659,1.538
 		c1.168,0.429,2.28,0.266,3.008-0.876c1.745-2.736,4.616-2.479,7.079-2.132c1.902,0.268,3.695,0.482,5.583,0.19
 		c1.494-0.231,3.006-0.348,4.513-0.49c1.557-0.148,2.946,0.085,4.207,1.222C225.746,149.175,227.613,148.592,228.77,148.336z"/></Link>
-					<Link to={`/state/${statesInfo[18]}`} state={statesInfo[18]}><path onMouseEnter={handleMouseTuscany}  fill="#FFFFFF" className="regione" data-id-regione="24" data-nome-regione="Toscana" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M205.067,200.665
+					<Link to={`/state/${statesInfo[18].name.toLowerCase()}`} state={statesInfo[18]}><path onMouseEnter={handleMouseTuscany}  fill="#FFFFFF" className="regione" data-id-regione="24" data-nome-regione="Toscana" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M205.067,200.665
 		c0.163,0.081,0.385,0.119,0.481,0.25c1.792,2.455,1.791,2.591,4.697,2.55c2.23-0.032,4.455-0.457,7.219-0.767
 		c-0.728-1.223-1.259-2.113-1.89-3.173c0.856-0.629,1.711-1.363,2.667-1.922c0.628-0.367,1.63-0.889,2.074-0.641
 		c1.973,1.101,2.739-0.381,3.943-1.764c1.741,2.589,3.554,5.141,7.347,3.64c0.104,0.763,0.147,1.296,0.254,1.816
@@ -357,7 +357,7 @@ function ItalyMap() {
 		c0.536,0.534,0.975,1.177,1.555,1.651c1.485,1.215,2.77,1.194,4.336,0.031c2.866-2.129,3.382-2.131,6.216-0.127
 		c1.158,0.819,2.308,1.66,3.53,2.376c2.485,1.456,3.352,1.19,4.737-1.273c0.231-0.411,0.487-0.811,0.772-1.185
 		C204.679,200.753,204.903,200.732,205.067,200.665z"/></Link>
-					<Link to={`/state/${statesInfo[15]}`} state={statesInfo[15]}><path onMouseEnter={handleMouseSicily}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="26" data-nome-regione="Sicilia" stroke-width="1" stroke-miterlimit="10" d="M384.528,658.926
+					<Link to={`/state/${statesInfo[15].name.toLowerCase()}`} state={statesInfo[15]}><path onMouseEnter={handleMouseSicily}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="26" data-nome-regione="Sicilia" stroke-width="1" stroke-miterlimit="10" d="M384.528,658.926
 		c-0.908-0.781-1.864-2.021-3.243-0.345c-2.169-2.501-4.62-3.79-7.818-3.606c-1.594,0.092-2.58-1.15-3.036-2.581
 		c-1.729-5.429-4.617-9.804-9.464-13.179c-3.807-2.651-7.748-3.699-12.158-3.752c-1.023-0.012-2.087,0.12-3.066,0.409
 		c-1.712,0.507-3.082,0.507-4.12-1.283c-0.826-1.425-2.143-2.101-3.879-1.565c-0.334,0.103-0.833,0.149-1.082-0.026
@@ -388,7 +388,7 @@ function ItalyMap() {
 		c-0.242,0.697-0.62,1.383-1.079,1.961c-1.703,2.142-2.469,4.276-0.869,6.914c0.624,1.028,0.617,2.439,0.944,3.884
 		c-0.4,0.228-0.944,0.539-1.534,0.875c-0.442-0.637-0.711-1.337-1.221-1.684c-0.725-0.494-1.785-1.199-2.42-0.983
 		c-1.586,0.54-2.688,0.126-3.801-0.901c-0.905-0.834-1.895-1.084-3.129-0.544C387.224,658.204,385.922,658.492,384.528,658.926z"/></Link>
-					<Link to={`/state/${statesInfo[2]}`} state={statesInfo[2]}><path onMouseEnter={handleMouseApulia}  fill="#FFFFFF" className="regione" data-id-regione="27" data-nome-regione="Puglia" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M403.525,356.517
+					<Link to={`/state/${statesInfo[2].name.toLowerCase()}`} state={statesInfo[2]}><path onMouseEnter={handleMouseApulia}  fill="#FFFFFF" className="regione" data-id-regione="27" data-nome-regione="Puglia" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M403.525,356.517
 		c-0.585-0.839-0.915-1.65-1.515-2.111c-1.781-1.368-2.008-3.171-1.529-5.106c0.541-2.186,1.29-4.321,2.052-6.816
 		c3.186,1.16,6.416,0.079,9.556,1.352c1.554,0.63,3.568,0.355,5.34,0.164c2.153-0.232,4.267-0.819,6.403-1.224
 		c0.54-0.102,1.195-0.305,1.638-0.106c3.84,1.727,7.549,0.3,11.288-0.376c0.557-0.101,1.125-0.231,1.64-0.458
@@ -422,7 +422,7 @@ function ItalyMap() {
 		c0.931-1.77,0.462-2.95-1.107-4.189c-1.262-0.996-2.516-2.004-3.808-2.96c-1.024-0.757-1.447-1.73-1.231-2.965
 		c0.289-1.656,0.614-3.305,0.924-4.957c2.871,1.215,2.85,1.196,4.909-1.142c0.556-0.631,1.252-1.155,1.943-1.645
 		C401.531,357.627,402.289,357.245,403.525,356.517z"/></Link>
-					<Link to={`/state/${statesInfo[8]}`} state={statesInfo[8]}><path onMouseEnter={handleMouseLazio}  fill="#FFFFFF" className="regione" data-id-regione="7" data-nome-regione="Lazio" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M282.85,371.152
+					<Link to={`/state/${statesInfo[8].name.toLowerCase()}`} state={statesInfo[8]}><path onMouseEnter={handleMouseLazio}  fill="#FFFFFF" className="regione" data-id-regione="7" data-nome-regione="Lazio" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M282.85,371.152
 		c-2.846-5.495-7.156-9.938-11.452-14.32c-1.725-1.76-4.305-2.682-6.114-3.758c-1.439-3.277-2.722-6.303-4.107-9.282
 		c-0.348-0.748-0.889-1.664-1.575-1.954c-3.067-1.302-4.955-4.008-7.473-5.947c-1.868-1.438-3.978-2.126-6.352-1.337
 		c-2.232-4.315-4.28-8.53-6.563-12.614c-2.201-3.936-5.725-6.496-9.692-8.482c-1.865-0.934-1.868-0.927-1.319-3.496
@@ -453,7 +453,7 @@ function ItalyMap() {
 		c-1.223-0.719-2.392-1.549-3.67-2.15c-5.03-2.369-10.534-1.297-14.398,2.713c-0.247,0.256-0.575,0.434-1.214,0.906
 		c-0.53-1.145-1.015-2.098-1.419-3.084c-1.929-4.716-4.974-8.242-10.104-9.574c-0.184-0.048-0.382-0.165-0.549-0.131
 		c-2.428,0.497-4.223-0.685-6.095-2.004C285.117,370.768,283.877,371.152,282.85,371.152z"/></Link>
-					<Link to={`/state/${statesInfo[17]}`} state={statesInfo[17]}><path onMouseEnter={handleMouseTrentino}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="162" data-nome-regione="Trentino-Alto Adige" stroke-width="1" stroke-miterlimit="10" d="M177.909,30.455
+					<Link to={`/state/${statesInfo[17].name.toLowerCase()}`} state={statesInfo[17]}><path onMouseEnter={handleMouseTrentino}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="162" data-nome-regione="Trentino-Alto Adige" stroke-width="1" stroke-miterlimit="10" d="M177.909,30.455
 		c1.423-2.678,1.956-5.221,2.322-9.072c0.092-0.969,0.786-1.882,1.322-3.087c1.259,0.15,2.524,0.301,3.928,0.469
 		c1.097-0.59,2.329-1.474,3.702-1.935c1.776-0.597,2.556,1.256,3.832,1.888c-0.735,2.803-0.694,2.83,2.035,3.377
 		c1.177,0.236,2.308,0.726,3.49,0.908c1.274,0.196,2.587,0.124,3.875,0.251c0.927,0.091,1.852,0.27,2.757,0.491
@@ -483,7 +483,7 @@ function ItalyMap() {
 		c0.036-1.493-0.888-3.009-1.461-4.763c0.613-0.213,1.281-0.496,1.975-0.677c1.869-0.488,2.902-1.838,3.333-3.554
 		c0.44-1.748-0.375-3.249-1.872-4.107c-1.788-1.025-3.735-1.77-5.608-2.648c-0.895-0.42-1.777-0.869-2.917-1.429
 		c2.251-0.941,3.551-3.193,3.436-5.484C182.461,31.494,180.398,30.853,177.909,30.455z"/></Link>
-					<Link to={`/state/${statesInfo[4]}`} state={statesInfo[4]}><path onMouseEnter={handleMouseCalabria}  fill="#FFFFFF" stroke="#000000" stroke-width="1" stroke-miterlimit="10" className="regione" data-id-regione="22" data-nome-regione="Calabria" d="M463.377,454.859
+					<Link to={`/state/${statesInfo[4].name.toLowerCase()}`} state={statesInfo[4]}><path onMouseEnter={handleMouseCalabria}  fill="#FFFFFF" stroke="#000000" stroke-width="1" stroke-miterlimit="10" className="regione" data-id-regione="22" data-nome-regione="Calabria" d="M463.377,454.859
 		c1.716-0.679,2.951-1.071,4.096-1.644c1.584-0.792,3.054-0.862,4.711,0.376c-2.087,3.313-3.299,6.799-1.121,10.276
 		c-1.963,2.912-3.788,5.544-5.535,8.227c-2.036,3.128-1.83,4.628,0.955,7.533c-0.087,1.182-1.01,2.582,0.309,3.644
 		c1.699,1.368,3.488,2.668,5.774,2.796c1.5,0.084,3.058,0.202,4.503-0.104c1.654-0.35,2.493,0.453,3.319,1.551
@@ -508,7 +508,7 @@ function ItalyMap() {
 		c0.457,2.958,2.379,4.247,5.256,3.327c1.431-0.457,2.741-1.304,4.338-1.013c1.758-1.797,3.958-1.766,6.239-1.621
 		c0.363,0.023,1.068-0.672,1.109-1.086c0.145-1.442,1-2.403,1.853-3.422c0.29-0.347,0.463-0.82,0.595-1.264
 		C462.52,457.923,463.01,456.149,463.377,454.859z"/></Link>
-					<Link to={`/state/${statesInfo[5]}`} state={statesInfo[5]}>
+					<Link to={`/state/${statesInfo[5].name.toLowerCase()}`} state={statesInfo[5]}>
 						<path onMouseEnter={handleMouseCampania}  fill="#FFFFFF" stroke="#000000" stroke-width="1" stroke-miterlimit="10" className="regione" data-id-regione="161" data-nome-regione="Campania" d="M400.276,382.654
 		c1.904,0.284,3.736,0.556,5.67,0.844c0,1.53-0.008,2.738,0.002,3.946c0.011,1.391-0.162,2.82,0.099,4.163
 		c0.512,2.631,3.066,4.372,5.503,3.347c2.806-1.18,4.988,0.048,7.287,0.99c2.048,0.839,3.208,5.104,1.926,7.238
@@ -536,7 +536,7 @@ function ItalyMap() {
 		c1.74-1.414,3.119-1.402,4.813,0.011c0.291,0.243,0.516,0.586,0.836,0.768c2.011,1.135,2.986,2.483,1.478,4.785
 		c-0.615,0.938-0.15,1.975,0.565,2.876C398.913,380.47,399.529,381.532,400.276,382.654z"/>
 					</Link>
-					<Link to={`/state/${statesInfo[0]}`} state={statesInfo[0]}>
+					<Link to={`/state/${statesInfo[0].name.toLowerCase()}`} state={statesInfo[0]}>
 						<path onMouseEnter={handleMouseAbruzzo}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="28" data-nome-regione="Abruzzo" stroke-width="1" stroke-miterlimit="10" d="M332.637,287.135
 		c7.629-6.238,7.629-6.238,9.942-6.115c1.24,3.438,2.438,6.91,3.753,10.338c0.537,1.401,1.321,2.707,2.006,4.05
 		c0.254,0.498,0.714,0.952,0.791,1.469c0.269,1.809,1.615,2.88,2.533,4.279c2.263,3.447,5.763,5.687,8.147,8.986
@@ -560,7 +560,7 @@ function ItalyMap() {
 		c1.577-5.23,3.059-5.879,7.962-3.453C331.937,286.905,332.213,286.979,332.637,287.135z"/>
 					</Link>
 
-					<Link to={`/state/${statesInfo[11]}`} state={statesInfo[11]}>
+					<Link to={`/state/${statesInfo[11].name.toLowerCase()}`} state={statesInfo[11]}>
 						<path onMouseEnter={handleMouseMarche}  fill="#FFFFFF" stroke="#000000" stroke-width="1" stroke-miterlimit="10" className="regione" data-id-regione="139" data-nome-regione="Marche" d="M300.687,279.806
 		c-0.925-0.678-1.758-1.223-2.508-1.865c-0.395-0.339-0.856-0.816-0.925-1.285c-0.57-3.87-2.536-7.255-3.681-10.92
 		c-0.16-0.512-0.301-1.216-0.079-1.63c0.966-1.797,0.454-3.453-0.17-5.181c-0.7-1.94-1.274-3.926-1.907-5.89
@@ -588,7 +588,7 @@ function ItalyMap() {
 		C303.877,277.31,302.869,277.367,300.687,279.806z"/>
 					</Link>
 
-					<Link to={`/state/${statesInfo[3]}`} state={statesInfo[3]}>
+					<Link to={`/state/${statesInfo[3].name.toLowerCase()}`} state={statesInfo[3]}>
 						<path onMouseEnter={handleMouseBasilicata}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="30" data-nome-regione="Basilicata" stroke-width="1" stroke-miterlimit="10" d="M412.554,410.169
 		c0.292-0.46,0.738-1.164,1.174-1.851c0.216-0.037,0.406-0.118,0.583-0.094c3.739,0.504,3.795,0.553,6.216-2.366
 		c1.622-1.956,2.719-4.14,1.677-6.814c-0.27-0.693-0.423-1.432-0.647-2.209c1.379-1.427,2.97-2.047,4.889-1.847
@@ -609,7 +609,7 @@ function ItalyMap() {
 		c-1.133-1.499-2.269-3.003-3.269-4.59c-0.612-0.971-0.866-2.057-0.045-3.173c0.812-1.103,0.299-1.954-0.763-2.562
 		c-0.575-0.329-1.208-0.57-1.746-0.949c-1.463-1.031-2.351-2.342-2.39-4.263C413.378,412.982,412.905,411.758,412.554,410.169z"/>
 					</Link>
-					<Link to={`/state/${statesInfo[19]}`} state={statesInfo[19]}>
+					<Link to={`/state/${statesInfo[19].name.toLowerCase()}`} state={statesInfo[19]}>
 						<path onMouseEnter={handleMouseUmbria}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="23" data-nome-regione="Umbria" stroke-width="1" stroke-miterlimit="10" d="M284.363,310.022
 		c-1.115-0.275-1.336-2.168-3.183-1.708c-0.102,0.65-0.374,1.373-0.294,2.054c0.285,2.408-0.318,4.291-2.991,5.221
 		c-0.597-0.427-1.382-1.081-2.253-1.587c-0.895-0.521-1.491-1.02-1.225-2.231c0.12-0.549-0.164-1.305-0.499-1.812
@@ -635,7 +635,7 @@ function ItalyMap() {
 		C286.647,306.945,287.874,309.69,284.363,310.022z"/>
 					</Link>
 
-					<Link to={`/state/${statesInfo[9]}`} state={statesInfo[9]}>
+					<Link to={`/state/${statesInfo[9].name.toLowerCase()}`} state={statesInfo[9]}>
 						<path onMouseEnter={handleMouseLiguria}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="25" data-nome-regione="Liguria" stroke-width="1" stroke-miterlimit="10" d="M42.661,221.236
 		c-0.031-0.048-0.174-0.191-0.232-0.363c-0.417-1.245-0.817-2.495-1.258-3.853c0.452-0.359,0.865-0.715,1.308-1.031
 		c0.383-0.273,1.082-0.435,1.154-0.756c0.574-2.545,2.77-3.413,4.608-4.668c0.305-0.208,0.701-0.508,0.758-0.82
@@ -666,7 +666,7 @@ function ItalyMap() {
 		c-0.486,0.264-1.161,0.585-1.612,0.443c-2.977-0.934-5.151,0.852-7.579,1.961c-0.92,0.42-2.14,0.309-3.21,0.241
 		C44.894,221.865,43.958,221.53,42.661,221.236z"/></Link>
 
-		<Link to={`/state/${statesInfo[12]}`} state={statesInfo[12]}>
+		<Link to={`/state/${statesInfo[12].name.toLowerCase()}`} state={statesInfo[12]}>
 						<path onMouseEnter={handleMouseMolise}  fill="#FFFFFF" stroke="#000000" stroke-width="1" stroke-miterlimit="10" className="regione" data-id-regione="160" data-nome-regione="Molise" d="M352.426,374.578
 		c-2.518,1.786-2.797,1.383-3.707-1.316c-1.087-3.224-1.104-6.109,0.217-9.201c0.84-1.967-0.276-3.836-1.461-6.132
 		c1.497,0.14,2.522,0.487,3.372,0.237c0.717-0.211,1.23-1.116,1.981-1.861c1.158,0.503,2.343,0.336,3.269-1.197
@@ -684,7 +684,7 @@ function ItalyMap() {
 		C352.071,373.355,352.255,373.979,352.426,374.578z"/>
 					</Link>
 
-					<Link to={`/state/${statesInfo[1]}`} state={statesInfo[1]}><path onMouseEnter={handleMouseAostaValley}  fill="#FFFFFF" className="regione" data-id-regione="31" data-nome-regione="Valle d'Aosta" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M9.717,88.4c2.883-1.377,5.557-2.516,8.068-3.94
+					<Link to={`/state/${statesInfo[1].name.toLowerCase()}`} state={statesInfo[1]}><path onMouseEnter={handleMouseAostaValley}  fill="#FFFFFF" className="regione" data-id-regione="31" data-nome-regione="Valle d'Aosta" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M9.717,88.4c2.883-1.377,5.557-2.516,8.068-3.94
 		c0.745-0.423,1.035-1.649,1.714-2.818c0.531,0.904,1.042,1.827,1.607,2.714c0.289,0.454,0.593,1.015,1.035,1.231
 		c1.187,0.579,1.816-1.648,3.303-0.651c1.387,0.93,1.915-0.483,2.891-1.192c1.5-1.089,3.444-2.096,5.493-1.545
 		c1.517,0.408,2.425-0.213,3.562-1.045c1.954-1.43,4.116-2.576,6.303-3.909c0.642,0.196,1.542,0.807,2.206,0.613
@@ -695,7 +695,7 @@ function ItalyMap() {
 		c-2.053,0.182-4.347,0.797-5.953,2.004c-1.756,1.32-3.598,0.824-4.595,0.165c-1.629-1.078-3.959-1.952-4.301-4.325
 		c-0.271-1.872-0.446-3.834-0.179-5.686c0.289-1.998-0.128-3.074-2.152-3.026C10.804,97.622,8.007,92.647,9.717,88.4z"/></Link>
 
-					<Link to={`/state/${statesInfo[7]}`} state={statesInfo[7]}>
+					<Link to={`/state/${statesInfo[7].name.toLowerCase()}`} state={statesInfo[7]}>
 						<path onMouseEnter={handleMouseFriuli}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="64" data-nome-regione="Friuli-Venezia Giulia" stroke-width="1" stroke-miterlimit="10" d="M337.955,95.388
 		c-0.467-1.35-1.107-2.493-2.816-2.818c-0.931-0.177-1.956-0.92-2.53-1.706c-1.184-1.62-2.656-2.037-4.312-1.942
 		c-1.733-3.102-0.782-5.894,0.895-8.69c0.47-0.784,0.513-1.825,0.906-3.34c-1.574,0.525-2.507,0.882-3.465,1.146
@@ -723,7 +723,7 @@ function ItalyMap() {
 		c-0.295,0.705-0.529,1.262-0.841,2.006c2.302,0.192,2.735-1.452,3.677-2.983C339.184,98.575,338.528,97.041,337.955,95.388z"/>
 					</Link>
 
-					<Link to={`/state/${statesInfo[20]}`} state={statesInfo[20]}>
+					<Link to={`/state/${statesInfo[20].name.toLowerCase()}`} state={statesInfo[20]}>
 						<path onMouseEnter={handleMouseVeneto}  fill="#FFFFFF" stroke="#000000" className="regione" data-id-regione="153" data-nome-regione="Veneto" stroke-width="1" stroke-miterlimit="10" d="M300.505,94.029
 		c-0.384-0.925-1.032-1.765-1.283-2.717c-0.468-1.772-0.734-3.598-1.099-5.48c-0.394,0.13-1.057,0.141-1.236,0.442
 		c-1.218,2.039-2.689,1.871-4.493,0.822c-0.695-0.404-1.657-0.319-2.464-0.564c-1.297-0.394-2.373-0.46-3.096,1.02
@@ -767,7 +767,7 @@ function ItalyMap() {
 		c0.075-0.047,0.102-0.164,0.173-0.223c1.574-1.317,3.093-2.807,5.399-1.399c0.198,0.121,0.633-0.145,1.134-0.278
 		C301.795,97.314,301.182,95.658,300.505,94.029z"/>
 					</Link>
-					<Link to={`/state/${statesInfo[14]}`} state={statesInfo[14]}>
+					<Link to={`/state/${statesInfo[14].name.toLowerCase()}`} state={statesInfo[14]}>
 						<path onMouseEnter={handleMouseSardinia}  fill="#FFFFFF" className="regione" data-id-regione="8" data-nome-regione="Sardegna" stroke="#000000" stroke-width="1" stroke-miterlimit="10" d="M113.051,392.579
 		c2.554,1.29,4.315-0.525,6.121-1.734c0.679-0.455,0.947-1.734,1.119-2.689c0.317-1.752,1.189-2.651,3.246-2.756
 		c-0.077,0.55-0.239,1.065-0.204,1.567c0.115,1.643,1.59,2.578,3.626,1.836c1.308-0.476,2.148,0.208,2.721,0.734
@@ -806,13 +806,14 @@ function ItalyMap() {
 				</g>
 			</svg>
 
-			<div className="map-content">
+			<Link className='anchor' to={`/state/${currentData}`} state={currentData}><div className="map-content">
 				<img src={currentData.image} />
 				<div className="map-content-name">
 					<h1>{currentData.name}</h1>
 					<p>{currentData.desc}</p>
 				</div>
-			</div>
+			</div></Link>
+			
 		</>
 	);
 }

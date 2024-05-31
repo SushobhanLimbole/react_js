@@ -1,9 +1,9 @@
 import './ContentBox1.css';
 
 export default function ContentBox1(props) {
-  console.log('content box1 called');
+  console.log('content box1 called',props.contentData);
 
-  console.log('bhjbjdxbvbjsbdjvbjb',props.contentData.image);
+  console.log('bhjbjdxbvbjsbdjvbjb',props.contentData);
     return (
         <div className="content-unesco">
           <img src={props.contentData.image} />

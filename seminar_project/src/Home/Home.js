@@ -7,6 +7,7 @@ import { useState } from "react";
 import ContentBox from "../ContentBox/ContentBox";
 import UNESCONav from "../NavContent/UNESCONav";
 import CastlesNav from "../NavContent/CastlesNav";
+import banner from '../assets/banner/quote_banner_1.webp';
 
 
 export default function Home() {
@@ -49,7 +50,9 @@ export default function Home() {
       <NavBar />
       <CarouselSlider />
 
-      <div className="quote-banner">
+      <div className="quote-banner" style={{
+        backgroundImage: `url(${banner})`
+      }}>
         <h1>
           Landscapes that will take your breath away, rich history, and
           delicious food, your trip to Italy will be nothing short of

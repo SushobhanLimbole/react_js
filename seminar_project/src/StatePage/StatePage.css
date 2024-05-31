@@ -1,6 +1,6 @@
 .hero-section {
   width: 100% !important;
-  height: 91vh !important;
+  height: 92.5vh;
 }
 
 .state-banner {
@@ -12,7 +12,7 @@
   background-size: cover;
   background-position: center;
   text-align: center;
-  background-image: url(https://tourismmedia.italia.it/is/image/mitur/fallback-background?wid=2880&hei=1280&fit=constrain,1&fmt=webp);
+  /* background-image: url(https://tourismmedia.italia.it/is/image/mitur/fallback-background?wid=2880&hei=1280&fit=constrain,1&fmt=webp); */
 }
 
 .state-banner h1 {

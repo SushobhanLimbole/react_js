@@ -1,26 +1,26 @@
 import { allCastlesSlides } from '../ALLCastles/CastlesSlides';
 import { unescoSlides } from '../ALLUNESCO/UnescoSlides';
-import abruzzo from '../assets/states data/abruzzo.jpg';
-import aostaValley from '../assets/states data/aosta_valley.jpeg';
-import apulia from '../assets/states data/apulia.webp';
-import basilicata from '../assets/states data/basilicata.webp';
-import calabria from '../assets/states data/calabria.webp';
+import abruzzo from '../assets/Italy/Abruzzo.jpg';
+import aostaValley from '../assets/states data/aosta.jpg';
+import apulia from '../assets/states data/apulia.jpg';
+import basilicata from '../assets/states data/basilicata.jpg';
+import calabria from '../assets/states data/calabria.jpg';
 import campania from '../assets/states data/campania.jpg';
-import emilia from '../assets/states data/emilia_romagna.jpg';
-import friuli from '../assets/states data/fruili.jpeg';
+import emilia from '../assets/states data/emilia.jpg';
+import friuli from '../assets/states data/fruilia.jpg';
 import lazio from '../assets/states data/lazio.jpg';
-import liguria from '../assets/states data/linguia.jpg';
+import liguria from '../assets/states data/liguria.jpg';
 import lombardy from '../assets/states data/lombardy.jpg';
 import marche from '../assets/states data/marche.jpg';
-import molise from '../assets/states data/molise.jpg';
-import piedmont from '../assets/states data/piedmont.jpg';
-import sardinia from '../assets/states data/sardinia.webp';
-import sicily from '../assets/states data/sicily.jpg';
+import molise from '../assets/states data/molise_.jpg';
+import piedmont from '../assets/states data/piedmon_.jpg';
+import sardinia from '../assets/states data/sardinia.jpg';
+import sicily from '../assets/states data/sicily_.jpg';
 import southTyrol from '../assets/states data/south.jpg';
-import trentino from '../assets/states data/trentino.jpeg';
-import tuscany from '../assets/states data/tuscany.webp';
+import trentino from '../assets/states data/trentino.jpg';
+import tuscany from '../assets/states data/tuscany.jpg';
 import umbria from '../assets/states data/umbria.jpeg';
-import veneto from '../assets/states data/veneto.jpg';
+import veneto from '../assets/states data/veneto_2.jpg';
 
 
 export const statesInfo = [
@@ -112,7 +112,7 @@ export const statesInfo = [
         ],
     },
     {
-        image: unescoSlides[12].image,
+        image: emilia,
         name: 'Emilia-Romagna',
         desc: "Renowned for its culinary delights (Parmesan cheese, balsamic vinegar), historic cities (Bologna, Ravenna, Modena), and motor racing (Ferrari)",
         banner: " Savor Italy's gastronomic heartland with world-renowned cuisine like Bolognese pasta and Parmigiano Reggiano cheese.",

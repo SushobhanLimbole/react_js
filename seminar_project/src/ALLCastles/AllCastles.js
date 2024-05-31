@@ -1,8 +1,22 @@
 import Navbar from '../NavBar/NavBar';
-import { allCastlesSlides } from './CastlesSlides';
+import { allCastlesSlides, castleSlider } from './CastlesSlides';
 import ContentBox2 from '../ContentBox/ContentBox2';
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useState } from 'react';
+import banner from '../assets/banner/quote_banner_2.webp';
 
 export default function ALLCastles() {
+
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex) => {
+        setIndex(selectedIndex);
+    };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>
@@ -22,7 +36,9 @@ export default function ALLCastles() {
             </div>
 
 
-            <div className="state-banner">
+            <div className="state-banner" style={{
+                backgroundImage: `url(${banner})`
+            }}>
                 <h1>
                 Unveil the secrets of Italy's majestic castles, where every stone tells a story and every tower touches the sky.
                 </h1>
@@ -41,13 +57,29 @@ export default function ALLCastles() {
                 <h1>Italy's Majestic Castles</h1>
             </div>
 
-            <div className="unmissable-sites-content inner-container">
+            {/* <div className="unmissable-sites-content inner-container">
                 {
                     allCastlesSlides.map((data) => (
                         <ContentBox2 contentData={data} />
                     ))
                 }
-            </div>
+            </div> */}
+
+            <Carousel activeIndex={index} onSelect={handleSelect} slide={false}>
+                {
+                    castleSlider.map((slide) => (
+                        <Carousel.Item>
+                            <div className="unmissable-sites-content inner-container">
+                                {
+                                    slide.slides.map((data) => (
+                                        <ContentBox2 contentData={data} />
+                                    ))
+                                }
+                            </div>
+                        </Carousel.Item>
+                    ))
+                }
+            </Carousel>
 
             <footer style={{ height: '10vh' }}></footer>
         </>

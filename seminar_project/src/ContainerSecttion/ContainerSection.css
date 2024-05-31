@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 4rem; 
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: relative;
   }
   
@@ -21,6 +21,7 @@
       position: absolute;
       bottom: -7.5rem;
       right: 0;
+      z-index: 5;
       background-color: inherit;
       color: #0058a5;
       border: 0.2rem solid #0058a5;

@@ -1,10 +1,15 @@
-.hero-section {
+/* .hero-section {
     width: 100% !important;
     height: 91vh !important;
     position: relative;
-  }
+  } */
+
+/* .info-pic{
+  position: relative;
+} */
 
 .carousel-caption{
     position: absolute;
     bottom: 0;
 }
+

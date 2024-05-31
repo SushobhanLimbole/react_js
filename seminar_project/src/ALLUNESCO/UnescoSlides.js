@@ -324,11 +324,11 @@ export  const unescoSlides = [
         title: 'Stato da Terra - Western Stato da Mar',
         para: "Fortifications built by the Venetian Republic, illustrating the military architecture of the time.",
     },
-    // {
-    //     image: pic54,
-    //     title: 'Ivrea, Industrial City of the 20th Century',
-    //     para: "An example of 20th-century industrial architecture and town planning, developed by the Olivetti company",
-    // },
+    {
+        image: pic54,
+        title: 'Ivrea, Industrial City of the 20th Century',
+        para: "An example of 20th-century industrial architecture and town planning, developed by the Olivetti company",
+    },
     {
         image: pic55,
         title: 'Le Colline del Prosecco di Conegliano e Valdobbiadene',
@@ -353,5 +353,38 @@ export  const unescoSlides = [
         image: pic59,
         title: 'Evaporitic Karst and Caves of Northern Apennines',
         para: "This natural site includes karst landscapes formed by the dissolution of evaporite rocks (such as gypsum) and features extensive cave systems. The Northern Apennines in Italy are notable for their geological formations and biodiversit.",
+    }
+];
+
+export const unescoSlider = [
+    {
+        slides: [unescoSlides[0],unescoSlides[1],unescoSlides[2],unescoSlides[3],unescoSlides[4],unescoSlides[5]]
+    },
+    {
+        slides: [unescoSlides[6],unescoSlides[7],unescoSlides[8],unescoSlides[9],unescoSlides[10],unescoSlides[11]]
+    },
+    {
+        slides: [unescoSlides[12],unescoSlides[13],unescoSlides[14],unescoSlides[15],unescoSlides[16],unescoSlides[17]]
+    },
+    {
+        slides: [unescoSlides[18],unescoSlides[19],unescoSlides[20],unescoSlides[21],unescoSlides[22],unescoSlides[23]]
+    },
+    {
+        slides: [unescoSlides[24],unescoSlides[25],unescoSlides[26],unescoSlides[27],unescoSlides[28],unescoSlides[29]]
+    },
+    {
+        slides: [unescoSlides[30],unescoSlides[31],unescoSlides[32],unescoSlides[33],unescoSlides[34],unescoSlides[35]]
+    },
+    {
+        slides: [unescoSlides[36],unescoSlides[37],unescoSlides[38],unescoSlides[39],unescoSlides[40],unescoSlides[41]]
+    },
+    {
+        slides: [unescoSlides[42],unescoSlides[43],unescoSlides[44],unescoSlides[45],unescoSlides[46],unescoSlides[47]]
+    },
+    {
+        slides: [unescoSlides[48],unescoSlides[49],unescoSlides[50],unescoSlides[51],unescoSlides[52],unescoSlides[53]]
+    },
+    {
+        slides: [unescoSlides[54],unescoSlides[55],unescoSlides[56],unescoSlides[57],unescoSlides[58],]
     }
 ];

@@ -1,0 +1,72 @@
+.drop-down {
+  padding: 1.5rem 3.5rem;
+  border-bottom: 0.5rem;
+  position: sticky;
+  top: 7.65vh;
+  z-index: 3;
+  width: 100%;
+  background-color: white;
+
+  backdrop-filter: blur(0.75rem);
+  background-color: #ffffffa0;
+}
+
+.drop-down-title {
+  font-family: "Jost";
+  font-size: 2.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.drop-down-para {
+  font-size: 1.9rem;
+  font-family: "Jost";
+  color: #5d646b;
+  word-spacing: 0.1rem;
+  font-weight: 350;
+  color: black;
+}
+
+.drop-inner-section {
+  margin-top: 3.5rem;
+  display: flex;
+}
+
+.drop-inner-column {
+  margin-left: 1.5rem;
+  margin-right: 15rem;
+}
+
+.drop-inner-column h3{
+  font-size: 2rem;
+  color: #0058a5;
+  margin-bottom: 1.8rem;
+  margin-top: 1rem;
+}
+
+.drop-inner-column a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.drop-inner-column a:hover{
+    color: #0058a5;
+}
+
+.drop-content {
+  margin-top: 0.5rem;
+  display: flex;
+}
+
+.drop-content h5 {
+  font-family: "Jost";
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #5d646bd3;
+  color: #5d646b;
+  color: black;
+}
+
+.drop-see-all {
+  display: flex;
+  align-items: center;
+}

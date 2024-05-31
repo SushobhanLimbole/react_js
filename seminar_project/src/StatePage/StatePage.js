@@ -1,23 +1,24 @@
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Navbar from '../NavBar/NavBar';
 import heroSection from '../assets/collo.jpg';
 import './StatePage.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ContentBox1 from '../ContentBox/ContentBox1';
 import ContentBox2 from '../ContentBox/ContentBox2';
+import banner from '../assets/banner/quote_banner_2.webp';
+import { unescoSlides } from '../ALLUNESCO/UnescoSlides';
 
 export default function StatePage() {
 
-    // const { data } = useParams();
     const [content, setContent] = useState(1);
-    // const { state } = useLocation().state;
-    // const location = useLocation();
-    // const state = location.state && location.state.state;
     const location = useLocation();
     const state = location.state;
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     console.log(state);
-    // console.log(state && state.content && state.content[0]);
 
 
     const changeUNESCO = () => {
@@ -31,79 +32,40 @@ export default function StatePage() {
     const renderContent = () => {
         switch (content) {
             case 1:
-                if (state.content[0].slides.length % 2 === 0) {
-                    return (<>
-                        <div className="unmissable-sites-content inner-container">
-                            {
-                                state.content[0].slides.map((state) => (
-                                    <ContentBox1 contentData={state} />
-                                ))
-                            }
-                        </div>
-                    </>
-                    );
-                } else {
-                    return (<>
-                        <div style={{ justifyContent: "space-evenly" }} className="unmissable-sites-content inner-container">
-                            {
-                                state.content[0].slides.map((state) => (
-                                    <ContentBox1 contentData={state} />
-                                ))
-                            }
-                        </div>
-                    </>
-                    );
-                }
+                return (<>
+                    <div className="unmissable-sites-content inner-container">
+                        {
+                            state.content[0].slides.map((state) => (
+                                <ContentBox1 contentData={state} />
+                            ))
+                        }
+                    </div>
+                </>
+                );
 
             case 2:
-                if (state.content[1].slides.length % 2 === 0) {
-                    return (<>
-                        <div className="unmissable-sites-content inner-container">
-                            {
-                                state.content[1].slides.map((state) => (
-                                    <ContentBox2 contentData={state} />
-                                ))
-                            }
-                        </div>
-                    </>
-                    );
-                } else {
-                    return (<>
-                        <div style={{ justifyContent: "space-evenly" }} className="unmissable-sites-content inner-container">
-                            {
-                                state.content[1].slides.map((state) => (
-                                    <ContentBox2 contentData={state} />
-                                ))
-                            }
-                        </div>
-                    </>
-                    );
-                }
+                return (<>
+                    <div className="unmissable-sites-content inner-container">
+                        {
+                            state.content[1].slides.map((state) => (
+                                <ContentBox2 contentData={state} />
+                            ))
+                        }
+                    </div>
+                </>
+                );
 
             default:
-                if (state.content[0].slides.length % 2 === 0) {
-                    return (<>
-                        <div className="unmissable-sites-content inner-container">
-                            {
-                                state.content[0].slides.map((state) => (
-                                    <ContentBox1 contentData={state} />
-                                ))
-                            }
-                        </div>
-                    </>
-                    );
-                } else {
-                    return (<>
-                        <div style={{ justifyContent: "space-evenly" }} className="unmissable-sites-content inner-container">
-                            {
-                                state.content[0].slides.map((state) => (
-                                    <ContentBox1 contentData={state} />
-                                ))
-                            }
-                        </div>
-                    </>
-                    );
-                }
+                return (<>
+                    <div className="unmissable-sites-content inner-container">
+                        {
+                            state.content[0].slides.map((state) => (
+                                <ContentBox1 contentData={state} />
+                            ))
+                        }
+                    </div>
+                </>
+                );
         }
     }
 
@@ -172,7 +134,9 @@ export default function StatePage() {
                 <h1 className='carousel-label'>{state.name}</h1>
             </div>
 
-            <div className="state-banner">
+            <div className="state-banner" style={{
+                backgroundImage: `url(${banner})`
+            }}>
                 <h1>
                     {state.banner}
                 </h1>
@@ -185,24 +149,6 @@ export default function StatePage() {
                 </div>
                 <img className='info-pic' src={heroSection} />
             </div>
-
-            {/* <div className="destinations">
-                <h3>Unmissable places</h3>
-                <h1>What to see in </h1>
-            </div>
-
-            <div className="dest-bar inner-container">
-                <button className="nav-links"><h2>UNESCO sites</h2><div className="underline"></div></button>
-                <button className="nav-links"><h2>Castles</h2><div className="underline"></div></button>
-            </div> */}
-
-            {/* <div className="unmissable-sites-content inner-container">
-                {
-                    props.state.map((state) => (
-                        <ContentBox contentData={state} />
-                    ))
-                }
-            </div> */}
 
             {
                 renderSection()

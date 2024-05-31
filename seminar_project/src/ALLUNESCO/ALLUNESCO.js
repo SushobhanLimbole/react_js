@@ -3,9 +3,24 @@ import heroSection from '../assets/Italy/henrique-ferreira-RKsLQoSnuTc-unsplash.
 import smallSection from '../assets/all_unesco/31_villa_tivoli.jpg';
 import './ALLUNESCO.css';
 import ContentBox1 from '../ContentBox/ContentBox1';
-import { unescoSlides } from './UnescoSlides';
+import { unescoSlider } from './UnescoSlides';
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useState } from 'react';
+import banner from '../assets/banner/quote_banner_2.webp';
+
 
 export default function ALLUNESCO() {
+
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex) => {
+        setIndex(selectedIndex);
+    };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>
@@ -25,9 +40,11 @@ export default function ALLUNESCO() {
             </div>
 
 
-            <div className="state-banner">
+            <div className="state-banner" style={{
+                backgroundImage: `url(${banner})`
+            }}>
                 <h1>
-                Discover Italy's UNESCO World Heritage Sites, where timeless beauty and cultural wonders come together in a journey through history.
+                    Discover Italy's UNESCO World Heritage Sites, where timeless beauty and cultural wonders come together in a journey through history.
                 </h1>
             </div>
 
@@ -44,13 +61,29 @@ export default function ALLUNESCO() {
                 <h1>Italy's Stunning UNESCO Sites</h1>
             </div>
 
-            <div className="unmissable-sites-content inner-container">
+            {/* <div style={{ justifyContent: 'space-evenly' }} className="unmissable-sites-content inner-container">
                 {
                     unescoSlides.map((data) => (
                         <ContentBox1 contentData={data} />
                     ))
                 }
-            </div>
+            </div> */}
+
+            <Carousel activeIndex={index} onSelect={handleSelect} slide={false}>
+                {
+                    unescoSlider.map((slide) => (
+                        <Carousel.Item>
+                            <div className="unmissable-sites-content inner-container">
+                                {
+                                    slide.slides.map((data) => (
+                                        <ContentBox1 contentData={data} />
+                                    ))
+                                }
+                            </div>
+                        </Carousel.Item>
+                    ))
+                }
+            </Carousel>
 
             <footer style={{ height: '10vh' }}></footer>
         </>

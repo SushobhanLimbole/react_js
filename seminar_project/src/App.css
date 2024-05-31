@@ -38,7 +38,7 @@
 
 html{
     scrollbar-width: none;
-    scroll-behavior:smooth;
+    /* scroll-behavior:smooth; */
     font-size: 62.5%;
 }
 
