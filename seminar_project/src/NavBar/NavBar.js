@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './NavBar.css';
 import logo from '../assets/logo2.png';
 import DropDown from '../DropDown/DropDown';
@@ -9,6 +9,11 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [drop, setDrop] = useState(false);
     const [content , setContent] = useState(0);
+    const navigate = useNavigate();
+
+    const handleLoginButton = () => {
+        navigate('/user');
+    };
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -50,7 +55,7 @@ export default function Navbar() {
                     <button onClick={handeDropDownInfo} className="nav-item nav-link">
                         Information
                     </button>
-                    <button className="nav-item nav-link">
+                    <button onClick={handleLoginButton} className="nav-item nav-link">
                         <span className="material-symbols-outlined nav-link" id='account'>
                             account_circle
                         </span>

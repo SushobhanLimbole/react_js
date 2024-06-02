@@ -1,12 +1,10 @@
 import { useLocation } from 'react-router-dom';
-import Navbar from '../NavBar/NavBar';
 import heroSection from '../assets/collo.jpg';
 import './StatePage.css';
 import { useEffect, useState } from 'react';
 import ContentBox1 from '../ContentBox/ContentBox1';
 import ContentBox2 from '../ContentBox/ContentBox2';
 import banner from '../assets/banner/quote_banner_2.webp';
-import { unescoSlides } from '../ALLUNESCO/UnescoSlides';
 
 export default function StatePage() {
 
@@ -121,7 +119,7 @@ export default function StatePage() {
 
     return (
         <>
-            <Navbar />
+
             <div
                 className="hero-section"
                 style={{

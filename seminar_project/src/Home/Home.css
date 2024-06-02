@@ -112,21 +112,13 @@
     }
 }
 
-footer {
-  height: 50vh;
-  margin-top: 8%;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  font-family: 'Jost';
-  background-color: var(--primary-color);
+/* footer {
+  
 }
 
 footer h1{
   font-weight: 400;
-}
+} */
 
 .footer-banner{
   height: 10vh;

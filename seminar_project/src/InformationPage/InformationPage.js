@@ -1,5 +1,4 @@
 import './InformationPage.css';
-import Navbar from '../NavBar/NavBar';
 import { infoPageContent } from './InfoPageContent';
 import { useLocation } from 'react-router-dom';
 
@@ -13,8 +12,6 @@ export default function InformationPage(params) {
 
     return (
         <>
-
-            <Navbar />
 
             <h1 className="info-page-header info-inner-container">
                 {infoPageContent[index].heading}

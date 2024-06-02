@@ -1,5 +1,4 @@
 import ItalyMap from '../ItalyMap/ItalyMap';
-import Navbar from '../NavBar/NavBar';
 import banner from '../assets/banner/quote_banner_1.webp';
 import pic from '../assets/states data/apulia.jpg';
 import '../Home/Home.css';
@@ -7,7 +6,6 @@ import '../Home/Home.css';
 export default function ItalianRegion() {
     return (
         <>
-            <Navbar />
             <div
                 className="hero-section"
                 style={{

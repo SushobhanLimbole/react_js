@@ -8,6 +8,7 @@ import ContentBox from "../ContentBox/ContentBox";
 import UNESCONav from "../NavContent/UNESCONav";
 import CastlesNav from "../NavContent/CastlesNav";
 import banner from '../assets/banner/quote_banner_1.webp';
+import Footer from "../Footer/Footer";
 
 
 export default function Home() {
@@ -47,7 +48,6 @@ export default function Home() {
 
   return (
     <>
-      <NavBar />
       <CarouselSlider />
 
       <div className="quote-banner" style={{
@@ -84,10 +84,9 @@ export default function Home() {
       <div className="map-section inner-container">
         <ItalyMap />
       </div>
-      <footer>
-        <h1>Footer section</h1>
-      </footer>
-      <div className="footer-banner"></div>
+
+      <Footer/>
+      
     </>
   );
 }

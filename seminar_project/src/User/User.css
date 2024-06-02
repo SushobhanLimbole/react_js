@@ -1,0 +1,201 @@
+/* .user-page {
+  height: 92.5vh;
+  width: 100vw;
+  display: flex;
+}
+
+.right-section {
+  height: 92.5vh;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.right-section img {
+  height: 100%;
+  width: 100%;
+}
+
+.user-overlay {
+  position: absolute;
+  font-family: "Jost", sans-serif;
+  font-size: 5rem;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.user-overlay h1 {
+  font-weight: 400;
+  font-size: 7rem;
+}
+
+.left-section {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+}
+
+.user-container {
+  height: 80%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.user-container h2 {
+  font-size: 3.6rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: rgba(128, 128, 128, 0.826);
+  margin-bottom: 1.5rem;
+}
+
+.user-container h1 {
+  font-size: 50px;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+
+.user-container h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 2.5rem;
+}
+
+.pic {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  margin-bottom: 10%;
+} */
+
+
+.user-page {
+  height: 92.5vh;
+  width: 100vw;
+  display: flex;
+}
+
+.right-section {
+  height: 92.5vh;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.right-section img {
+  height: 100%;
+  width: 100%;
+}
+
+.user-overlay {
+  position: absolute;
+  font-family: "Jost", sans-serif;
+  color: white;
+  letter-spacing: 0.2rem; /* 2px converted to rem */
+}
+
+.user-overlay h1 {
+  font-weight: 400;
+  font-size: 8rem; /* 70px converted to rem */
+}
+
+.left-section {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+}
+
+.user-container {
+  height: 80%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.user-container h2 {
+  font-size: 3.6rem; /* 36px converted to rem */
+  font-weight: 400;
+  letter-spacing: 0.2rem; /* 2px converted to rem */
+  color: rgba(128, 128, 128, 0.826);
+  margin-bottom: 1.5rem;
+}
+
+.user-container h1 {
+  font-size: 5rem; /* 50px converted to rem */
+  letter-spacing: 0.3rem; /* 3px converted to rem */
+  margin-bottom: 2rem;
+}
+
+.user-container h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 2.5rem; /* 25px converted to rem */
+}
+
+.pic {
+  height: 15rem; /* 150px converted to rem */
+  width: 15rem; /* 150px converted to rem */
+  border-radius: 50%;
+  margin-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+  /* Adjust styles for tablets and smaller devices */
+  .right-section {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .left-section {
+    width: 100%;
+    padding: 0 2rem;
+    align-items: center;
+  }
+
+  .user-overlay {
+    font-size: 4.8rem; /* Adjusted for smaller screens */
+    letter-spacing: 0.1rem; /* Adjusted for smaller screens */
+    top: 5%;
+    left: 5%;
+  }
+
+  .user-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .user-container h2 {
+    font-size: 3rem; /* Adjusted for smaller screens */
+    letter-spacing: 0.1rem; /* Adjusted for smaller screens */
+  }
+
+  .user-container h1 {
+    font-size: 4rem; /* Adjusted for smaller screens */
+    letter-spacing: 0.2rem; /* Adjusted for smaller screens */
+  }
+
+  .user-container h3 {
+    font-size: 2rem; /* Adjusted for smaller screens */
+  }
+
+  .pic {
+    height: 12rem; /* Adjusted for smaller screens */
+    width: 12rem; /* Adjusted for smaller screens */
+    margin-bottom: 5%;
+  }
+}

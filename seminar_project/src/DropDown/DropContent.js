@@ -38,7 +38,8 @@ export const dropContent = [
                 data: [
                     <Link to={`/information/${'how-to-travel'}`} state={1}>Travel to Italy</Link>,
                     <Link to={`/information/${'currency'}`} state={2}>Currency and Payments</Link>,
-                    <Link to={`/information/${'phone-&-web'}`} state={3}>Phone & Web</Link>],
+                    <Link to={`/information/${'phone-&-web'}`} state={3}>Phone & Web</Link>
+                ],
                 seeAll: false,
             }
         ]
