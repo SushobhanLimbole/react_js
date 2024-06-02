@@ -1,4 +1,3 @@
-import Navbar from '../NavBar/NavBar';
 import heroSection from '../assets/Italy/henrique-ferreira-RKsLQoSnuTc-unsplash.jpg';
 import smallSection from '../assets/all_unesco/31_villa_tivoli.jpg';
 import './ALLUNESCO.css';
@@ -8,6 +7,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import banner from '../assets/banner/quote_banner_2.webp';
+import Footer from '../Footer/Footer';
 
 
 export default function ALLUNESCO() {
@@ -24,7 +24,6 @@ export default function ALLUNESCO() {
 
     return (
         <>
-            <Navbar />
 
             <div
                 className="hero-section"
@@ -61,14 +60,6 @@ export default function ALLUNESCO() {
                 <h1>Italy's Stunning UNESCO Sites</h1>
             </div>
 
-            {/* <div style={{ justifyContent: 'space-evenly' }} className="unmissable-sites-content inner-container">
-                {
-                    unescoSlides.map((data) => (
-                        <ContentBox1 contentData={data} />
-                    ))
-                }
-            </div> */}
-
             <Carousel activeIndex={index} onSelect={handleSelect} slide={false}>
                 {
                     unescoSlider.map((slide) => (
@@ -85,7 +76,7 @@ export default function ALLUNESCO() {
                 }
             </Carousel>
 
-            <footer style={{ height: '10vh' }}></footer>
+            <Footer />
         </>
     );
 }

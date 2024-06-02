@@ -1,6 +1,7 @@
 import './InformationPage.css';
 import { infoPageContent } from './InfoPageContent';
 import { useLocation } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 export default function InformationPage(params) {
 
@@ -47,7 +48,7 @@ export default function InformationPage(params) {
                 ))
             }
 
-            <footer></footer>
+            <Footer/>
         </>
     );
 }

@@ -1,10 +1,10 @@
-import Navbar from '../NavBar/NavBar';
 import { allCastlesSlides, castleSlider } from './CastlesSlides';
 import ContentBox2 from '../ContentBox/ContentBox2';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import banner from '../assets/banner/quote_banner_2.webp';
+import Footer from '../Footer/Footer';
 
 export default function ALLCastles() {
 
@@ -20,7 +20,6 @@ export default function ALLCastles() {
 
     return (
         <>
-            <Navbar />
 
             <div
                 className="hero-section"
@@ -40,7 +39,7 @@ export default function ALLCastles() {
                 backgroundImage: `url(${banner})`
             }}>
                 <h1>
-                Unveil the secrets of Italy's majestic castles, where every stone tells a story and every tower touches the sky.
+                    Unveil the secrets of Italy's majestic castles, where every stone tells a story and every tower touches the sky.
                 </h1>
             </div>
 
@@ -56,14 +55,6 @@ export default function ALLCastles() {
                 <h3>Unmissable places</h3>
                 <h1>Italy's Majestic Castles</h1>
             </div>
-
-            {/* <div className="unmissable-sites-content inner-container">
-                {
-                    allCastlesSlides.map((data) => (
-                        <ContentBox2 contentData={data} />
-                    ))
-                }
-            </div> */}
 
             <Carousel activeIndex={index} onSelect={handleSelect} slide={false}>
                 {
@@ -81,7 +72,7 @@ export default function ALLCastles() {
                 }
             </Carousel>
 
-            <footer style={{ height: '10vh' }}></footer>
+            <Footer />
         </>
     );
 }

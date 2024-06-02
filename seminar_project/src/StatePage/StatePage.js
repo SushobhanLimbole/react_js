@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import ContentBox1 from '../ContentBox/ContentBox1';
 import ContentBox2 from '../ContentBox/ContentBox2';
 import banner from '../assets/banner/quote_banner_2.webp';
+import Footer from '../Footer/Footer';
 
 export default function StatePage() {
 
@@ -152,7 +153,7 @@ export default function StatePage() {
                 renderSection()
             }
 
-            <footer style={{ height: '10vh' }}></footer>
+            <Footer />
         </>
     );
 }
