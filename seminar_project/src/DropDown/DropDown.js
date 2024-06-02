@@ -1,11 +1,20 @@
+import { Link, useNavigate } from 'react-router-dom';
 import bullet from '../assets/bullet.png';
 import forward from '../assets/forward.png';
 import { dropContent } from './DropContent';
 import './DropDown.css';
 
 
-export default function DropDown(params) {
-    const data = dropContent[0];
+export default function DropDown(props) {
+
+    const data = dropContent[props.load];
+    const navigate = useNavigate();
+
+    const handleNavigate = (path) => {
+        console.log(path);
+        navigate(`${path}`);
+    }
+
     return (
         <div className="drop-down">
             <h1 className="drop-down-title">
@@ -38,8 +47,8 @@ export default function DropDown(params) {
                             }
 
                             {
-                                content.seeAll ? <div className='drop-see-all'>
-                                    <h3>{content.seeAllRoute}</h3>
+                                content.seeAll ? <div onClick={() => handleNavigate(content.seeAllRoute)} className='drop-see-all'>
+                                    <h3>See all</h3>
                                     <div style={{
                                         backgroundImage: `url(${forward})`,
                                         height: "1.8rem",

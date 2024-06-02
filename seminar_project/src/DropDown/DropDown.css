@@ -1,14 +1,15 @@
 .drop-down {
-  padding: 1.5rem 3.5rem;
+  padding: 2rem 3.5rem;
   border-bottom: 0.5rem;
   position: sticky;
-  top: 7.65vh;
+  top: 9.07vh;
   z-index: 3;
   width: 100%;
   background-color: white;
 
   backdrop-filter: blur(0.75rem);
   background-color: #ffffffa0;
+  border-bottom: 0.01rem solid rgba(128, 128, 128, 0.224);
 }
 
 .drop-down-title {

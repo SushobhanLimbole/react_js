@@ -1,0 +1,44 @@
+.info-inner-container{
+    width: 60vw;
+    margin: auto;
+}
+
+.info-page-header{
+    margin-top: 5%;
+    font-size: 4.2rem;
+}
+
+.info-page-para{
+    margin-top: 1%;
+    font-size: 2.5rem;
+    font-family: 'Jost';
+    color: #5d646b;
+}
+
+.centre-cont{
+    display: flex;
+    justify-content: center;
+}
+
+.info-page-pic{
+    height: 80vh;
+    width: 70vw;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    border-radius: 2rem;
+}
+
+.info-page-section{
+    margin-bottom: 3%;
+}
+
+.info-page-section h3{
+    font-size: 3.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.info-page-section p{
+    font-size: 1.9rem;
+    font-family: 'Roboto';
+    color: #5d646b;
+}

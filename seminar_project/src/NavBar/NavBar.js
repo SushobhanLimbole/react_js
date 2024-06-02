@@ -8,14 +8,22 @@ export default function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
     const [drop, setDrop] = useState(false);
+    const [content , setContent] = useState(0);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
-    const handeDropDown = () => {
+    const handeDropDownWhere = () => {
         let change = !drop;
         setDrop(change);
+        setContent(0);
+    }
+
+    const handeDropDownInfo = () => {
+        let change = !drop;
+        setDrop(change);
+        setContent(1);
     }
 
     return (
@@ -33,16 +41,16 @@ export default function Navbar() {
                     <button className="nav-item nav-link">
                         <Link to="/" className="nav-link">Home</Link>
                     </button>
-                    <button onClick={handeDropDown} className="nav-item nav-link">
+                    <button onClick={handeDropDownWhere} className="nav-item nav-link">
                         Where to Go
                     </button>
                     {/* <div className="nav-item">
                     <Link to="/unesco" className="nav-link">What to Do</Link>
                 </div> */}
-                    <button onClick={handeDropDown} className="nav-item nav-link">
+                    <button onClick={handeDropDownInfo} className="nav-item nav-link">
                         Information
                     </button>
-                    <button onClick={handeDropDown} className="nav-item nav-link">
+                    <button className="nav-item nav-link">
                         <span className="material-symbols-outlined nav-link" id='account'>
                             account_circle
                         </span>
@@ -55,7 +63,7 @@ export default function Navbar() {
             </div> */}
             </nav>
             {
-                drop ? <DropDown /> : <></>
+                drop ? <DropDown load={content}/> : <></>
             }
         </>
 
