@@ -201,7 +201,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .content-castles {
     height: 48rem; /* Adjusted height for larger screens */
     min-width: 35rem; /* Adjusted width for larger screens */
@@ -212,17 +212,38 @@
     height: 80%; /* Adjusted image height for larger screens */
   }
 
+  .content-castles h1{
+    font-size: 2.5rem;
+  }
+
+  .content-castles h3{
+    font-size: 1.8rem;
+  }
+
+  .location-on{
+    font-size: 1.8rem;
+  }
+
+  .content-castles:hover .overlay-castles-bg {
+    height: 80%;
+  }
+  
+  .content-castles:hover .overlay-castles-content {
+    height: 80%;
+    opacity: 1;
+  }
+
   .overlay-castles-bg,
   .overlay-castles-content {
-    bottom: 15%; /* Adjusted bottom position for larger screens */
+    bottom: 20%; /* Adjusted bottom position for medium-large screens */
   }
 
   .overlay-castles-content h1 {
-    font-size: 2.5rem; /* Decreased font size for larger screens */
+    font-size: 3.5rem; /* Decreased font size for medium-large screens */
   }
 
   .overlay-castles-content p {
-    font-size: 1.4rem; /* Decreased font size for larger screens */
+    font-size: 2rem; /* Decreased font size for medium-large screens */
   }
 }
 
@@ -237,17 +258,38 @@
     height: 78%; /* Adjusted image height for medium-large screens */
   }
 
+  .content-castles h1{
+    font-size: 3.2rem;
+  }
+
+  .content-castles h3{
+    font-size: 2.2rem;
+  }
+
+  .location-on{
+    font-size: 2.2rem;
+  }
+
+  .content-castles:hover .overlay-castles-bg {
+    height: 78%;
+  }
+  
+  .content-castles:hover .overlay-castles-content {
+    height: 78%;
+    opacity: 1;
+  }
+
   .overlay-castles-bg,
   .overlay-castles-content {
-    bottom: 13%; /* Adjusted bottom position for medium-large screens */
+    bottom: 22%; /* Adjusted bottom position for medium-large screens */
   }
 
   .overlay-castles-content h1 {
-    font-size: 2.4rem; /* Decreased font size for medium-large screens */
+    font-size: 3.5rem; /* Decreased font size for medium-large screens */
   }
 
   .overlay-castles-content p {
-    font-size: 1.3rem; /* Decreased font size for medium-large screens */
+    font-size: 2.2rem; /* Decreased font size for medium-large screens */
   }
 }
 
@@ -256,22 +298,46 @@
     height: 42rem; /* Adjusted height for medium screens */
     min-width: 30rem; /* Adjusted width for medium screens */
     margin-right: 2%;
+    padding-bottom: 0.3rem;
   }
 
   .content-castles img {
     height: 76%; /* Adjusted image height for medium screens */
   }
 
+  .content-castles h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.2rem;
+  }
+
+  .content-castles h3{
+    font-size: 1.8rem;
+  }
+
+  .location-on{
+    font-size: 1.8rem;
+  }
+
+  .content-castles:hover .overlay-castles-bg {
+    height: 76%;
+  }
+  
+  .content-castles:hover .overlay-castles-content {
+    height: 76%;
+    opacity: 1;
+  }
+
   .overlay-castles-bg,
   .overlay-castles-content {
-    bottom: 11%; /* Adjusted bottom position for medium screens */
+    bottom: 24.4%; /* Adjusted bottom position for medium-large screens */
   }
 
   .overlay-castles-content h1 {
-    font-size: 2.3rem; /* Decreased font size for medium screens */
+    font-size: 2.8rem; /* Decreased font size for medium-large screens */
   }
 
   .overlay-castles-content p {
-    font-size: 1.2rem; /* Decreased font size for medium screens */
+    font-size: 1.8rem; /* Decreased font size for medium-large screens */
   }
 }

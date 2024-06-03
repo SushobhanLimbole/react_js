@@ -208,10 +208,12 @@
   .footer-section {
     margin-top: 15%; /* Adjusted top margin for smaller screens */
     padding: 2.5% 1%;
+    margin-bottom: 10%;
   }
 
   .footer-inner-section {
     font-size: 1.8rem; /* Further reduced font size for smaller screens */
+    padding: 2%;
   }
 
   .footer-img {

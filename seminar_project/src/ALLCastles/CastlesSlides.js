@@ -95,7 +95,7 @@ export const allCastlesSlides = [
     },
     {
         image: pic13,
-        title: "Castello di Sammezzano",
+        title: "Castello di Samezzano",
         loc:" Tuscany,Italy",
         para: "Known for its exotic Moorish architecture, Castello di Sammezzano is a 19th-century marvel with intricately decorated rooms and a rich history",
     },

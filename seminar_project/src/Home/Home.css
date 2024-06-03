@@ -567,26 +567,26 @@
 }
 
 /* Responsive Adjustments */
-@media (min-width: 1200px) {
+@media (max-width: 1500px) {
   .content {
-    min-width: 40rem; /* Keep maximum width consistent */
-    height: 50rem; /* Allow height to adjust based on content */
+    min-width: 40rem; 
+    height: 50rem; 
     box-shadow: 0rem 0rem 0.5rem 0rem rgba(72, 67, 67, 0.288);
     margin-right: 2rem;
   }
 
   .quote-banner h1 {
-    font-size: 3.5rem; /* 35px */
+    font-size: 3.5rem; 
   }
 
   .destinations h1,
   .map-before h1 {
-    font-size: 3.5rem; /* 35px */
+    font-size: 3.5rem; 
   }
 
   .destinations h3,
   .map-before h3 {
-    font-size: 1.8rem; /* 18px */
+    font-size: 1.9rem; 
   }
 
   .unmissable-sites-content {
@@ -609,26 +609,80 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 980px) {
   .content {
-    min-width: 40rem; /* Keep maximum width consistent */
-    height: 50rem; /* Allow height to adjust based on content */
+    min-width: 40rem; 
+    height: 50rem; 
     box-shadow: 0rem 0rem 0.5rem 0rem rgba(72, 67, 67, 0.288);
     margin-right: 2rem;
   }
 
   .quote-banner h1 {
-    font-size: 3.5rem; /* 35px */
+    font-size: 4rem; 
   }
 
   .destinations h1,
   .map-before h1 {
-    font-size: 3.5rem; /* 35px */
+    font-size: 4rem; 
   }
 
   .destinations h3,
   .map-before h3 {
-    font-size: 1.8rem; /* 18px */
+    font-size: 2.2rem; 
+  }
+
+  .dest-bar h2{
+    font-size: 2.8rem;
+  }
+
+  .unmissable-sites-content {
+    height: auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 90%;
+    margin: auto;
+    padding: 3% 2%;
+  }
+
+  .see-more-button {
+    position: static;
+    height: 50rem;
+    bottom: 7.5rem;
+    color: white;
+    background-color: #0058a5;
+    border: 0.2rem solid transparent;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    min-width: 40rem; 
+    height: 50rem; 
+    box-shadow: 0rem 0rem 0.5rem 0rem rgba(72, 67, 67, 0.288);
+    margin-right: 2rem;
+  }
+
+  .quote-banner h1 {
+    font-size: 3rem; 
+  }
+
+  .destinations h1,
+  .map-before h1 {
+    font-size: 3rem; 
+  }
+
+  .destinations h3,
+  .map-before h3 {
+    font-size: 1.8rem; 
+  }
+
+  .destinations{
+    margin-bottom: 3%;
+  }
+
+  .dest-bar h2{
+    font-size: 2rem;
   }
 
   .unmissable-sites-content {
@@ -667,21 +721,25 @@
     margin: auto;
     padding: 3% 2%;
   }
+  
+  .dest-bar{
+    margin-bottom: 1%;
+  }
 
   .content-name h1 {
-    font-size: 2.3rem; /* Decrease font size for smaller screens if necessary */
+    font-size: 2.8rem; /* Decrease font size for smaller screens if necessary */
   }
 
   .content-name p {
-    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+    font-size: 1.5rem; /* Decrease font size for smaller screens if necessary */
   }
 
   .content-name h3 {
-    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+    font-size: 1.5rem; /* Decrease font size for smaller screens if necessary */
   }
 
   .location-on {
-    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+    font-size: 1.5rem; /* Decrease font size for smaller screens if necessary */
   }
 
   .see-more-button {
@@ -732,27 +790,27 @@
   }
 } */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .content {
-    min-width: 38rem; /* Keep maximum width consistent */
-    height: 55rem; /* Allow height to adjust based on content */
+    min-width: 38rem; 
+    height: 55rem; 
     box-shadow: 0rem 0rem 0.5rem 0rem rgba(72, 67, 67, 0.288);
   }
 
   .content-name h1 {
-    font-size: 2.3rem; /* Decrease font size for smaller screens if necessary */
+    font-size: 2.3rem; 
   }
 
   .content-name p {
-    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+    font-size: 1.26rem; 
   }
 
   .content-name h3 {
-    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+    font-size: 1.2rem; 
   }
 
   .location-on {
-    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+    font-size: 1.2rem; 
   }
 
   .see-more-button {
@@ -764,4 +822,8 @@
     border: 0.2rem solid transparent;
     margin-top: 0;
   }
-}
+
+  .dest-bar{
+    margin-bottom: 2.5%;
+  }
+} */

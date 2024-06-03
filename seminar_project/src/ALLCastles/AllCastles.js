@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer';
 
 export default function ALLCastles() {
 
+    const [isMobile, setIsMobile] = useState(false);
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex) => {
@@ -16,6 +17,20 @@ export default function ALLCastles() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 1500); // Adjust breakpoint as needed
+        };
+
+        // Initial check on component mount
+        handleResize();
+
+        // Event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     return (
@@ -28,10 +43,11 @@ export default function ALLCastles() {
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                 }}
-            ></div>
-            <div className='carousel-caption'>
-                <h1 className='carousel-label'>{allCastlesSlides[20].title}</h1>
-                <h3 className='carousel-capt'>{allCastlesSlides[20].loc}</h3>
+            >
+                <div className='carousel-caption'>
+                    <h1 className='carousel-label'>{allCastlesSlides[20].title}</h1>
+                    <h3 className='carousel-capt'>{allCastlesSlides[20].loc}</h3>
+                </div>
             </div>
 
 
@@ -56,21 +72,30 @@ export default function ALLCastles() {
                 <h1>Italy's Majestic Castles</h1>
             </div>
 
-            <Carousel activeIndex={index} onSelect={handleSelect} slide={false}>
-                {
-                    castleSlider.map((slide) => (
-                        <Carousel.Item>
-                            <div className="unmissable-sites-content inner-container">
-                                {
-                                    slide.slides.map((data) => (
-                                        <ContentBox2 contentData={data} />
-                                    ))
-                                }
-                            </div>
-                        </Carousel.Item>
-                    ))
-                }
-            </Carousel>
+            {
+                isMobile ? <div className="unmissable-sites-content inner-container">
+                    {
+                        allCastlesSlides.map((state) => (
+                            <ContentBox2 contentData={state} />
+                        ))
+                    }
+                </div> : <Carousel activeIndex={index} onSelect={handleSelect} slide={false}>
+                    {
+                        castleSlider.map((slide) => (
+                            <Carousel.Item>
+                                <div className="unmissable-sites-content inner-container">
+                                    {
+                                        slide.slides.map((data) => (
+                                            <ContentBox2 contentData={data} />
+                                        ))
+                                    }
+                                </div>
+                            </Carousel.Item>
+                        ))
+                    }
+                </Carousel>
+
+            }
 
             <Footer />
         </>

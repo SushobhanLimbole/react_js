@@ -82,11 +82,6 @@ export default function Home() {
         <h1>Discover Italy</h1>
       </div>
 
-      {/* <div className="map-section inner-container">
-        <ItalyMap />
-        <ItalyMobileMap/>
-      </div> */}
-
       {
         <MapSection/>
       }

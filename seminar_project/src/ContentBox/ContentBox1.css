@@ -277,7 +277,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .content-unesco {
     height: 48rem; /* Adjusted height for larger screens */
     min-width: 35rem;
@@ -288,17 +288,30 @@
     height: 76%; /* Adjusted image height for larger screens */
   }
 
+  .content-name-unesco h1{
+    font-size: 2.2rem;
+  }
+
+  .content-unesco:hover .overlay-unesco-bg {
+    height: 76%; /* Expanded height on hover */
+  }
+  
+  .content-unesco:hover .overlay-unesco-content {
+    height: 76%; /* Expanded height on hover */
+    opacity: 1;
+  }
+
   .overlay-unesco-bg,
   .overlay-unesco-content {
-    bottom: 20%; /* Adjusted bottom position for larger screens */
+    bottom: 24%; /* Adjusted bottom position for larger screens */
   }
 
   .overlay-unesco-content h1 {
-    font-size: 2.5rem; /* Decreased font size for larger screens */
+    font-size: 2.6rem; /* Decreased font size for larger screens */
   }
 
   .overlay-unesco-content p {
-    font-size: 1.4rem; /* Decreased font size for larger screens */
+    font-size: 1.6rem; /* Decreased font size for larger screens */
   }
 }
 
@@ -310,20 +323,33 @@
   }
 
   .content-unesco img {
-    height: 74%; /* Adjusted image height for medium-large screens */
+    height: 76%; /* Adjusted image height for medium-large screens */
+  }
+
+  .content-name-unesco h1{
+    font-size: 2.7rem;
+  }
+
+  .content-unesco:hover .overlay-unesco-bg {
+    height: 76%; /* Expanded height on hover */
+  }
+  
+  .content-unesco:hover .overlay-unesco-content {
+    height: 76%; /* Expanded height on hover */
+    opacity: 1;
   }
 
   .overlay-unesco-bg,
   .overlay-unesco-content {
-    bottom: 18%; /* Adjusted bottom position for medium-large screens */
+    bottom: 24%; /* Adjusted bottom position for larger screens */
   }
 
   .overlay-unesco-content h1 {
-    font-size: 2.4rem; /* Decreased font size for medium-large screens */
+    font-size: 3.2rem; /* Decreased font size for larger screens */
   }
 
   .overlay-unesco-content p {
-    font-size: 1.3rem; /* Decreased font size for medium-large screens */
+    font-size: 2.2rem; /* Decreased font size for larger screens */
   }
 }
 
@@ -338,40 +364,30 @@
     height: 70%; /* Adjusted image height for medium screens */
   }
 
+  .content-name-unesco h1{
+    font-size: 2.2rem;
+  }
+
+  .content-unesco:hover .overlay-unesco-bg {
+    height: 70%; /* Expanded height on hover */
+  }
+  
+  .content-unesco:hover .overlay-unesco-content {
+    height: 70%; /* Expanded height on hover */
+    opacity: 1;
+  }
+
   .overlay-unesco-bg,
   .overlay-unesco-content {
-    bottom: 16%; /* Adjusted bottom position for medium screens */
+    bottom: 30%; /* Adjusted bottom position for larger screens */
   }
 
   .overlay-unesco-content h1 {
-    font-size: 2.3rem; /* Decreased font size for medium screens */
+    font-size: 2.5rem; /* Decreased font size for larger screens */
   }
 
   .overlay-unesco-content p {
-    font-size: 1.2rem; /* Decreased font size for medium screens */
+    font-size: 1.8rem; /* Decreased font size for larger screens */
   }
 }
 
-/* @media (max-width: 600px) {
-  .content-unesco {
-    height: 42rem; 
-    min-width: 30rem; 
-  }
-
-  .content-unesco img {
-    height: 70%; 
-  }
-
-  .overlay-unesco-bg,
-  .overlay-unesco-content {
-    bottom: 14%; 
-  }
-
-  .overlay-unesco-content h1 {
-    font-size: 2.2rem; 
-  }
-
-  .overlay-unesco-content p {
-    font-size: 1.1rem; 
-  }
-} */

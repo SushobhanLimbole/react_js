@@ -71,6 +71,14 @@ path.selected {
   text-decoration: none;
 }
 
+.map-resize{
+  padding: 0 6rem;
+  width: 50%;
+  height: auto;
+  background-size: cover;
+  margin-top: 2%;
+}
+
 @media (max-width: 1200px) {
   .map-content {
     height: 38rem;
@@ -84,6 +92,13 @@ path.selected {
 
   .map-content-name p {
     font-size: 1.3rem;
+  }
+
+  .map-resize{
+    padding: 0 6rem;
+    width: 90%;
+    height: 60vh;
+    margin-bottom: 6%;
   }
 }
 
@@ -115,11 +130,11 @@ path.selected {
 @media (max-width: 768px) {
   .map-content {
     height: 50%;
-    width: 60%;
+    width: 80%;
     margin-bottom: 2rem;
     font-size: 1.1rem;
     margin: auto;
-    margin-top: 8%;
+    /* margin-top: 8%; */
   }
 
   .map-content img {
@@ -139,8 +154,11 @@ path.selected {
     font-size: 2rem;
   }
 
-  .map-resize {
-    padding: 0 12rem;
+  .map-resize{
+    padding: 0 0.2rem;
     width: 90%;
+    height: auto;
+    background-size: cover;
+    margin-top: 2%;
   }
 }

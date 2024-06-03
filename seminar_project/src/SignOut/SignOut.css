@@ -1,15 +1,42 @@
-.sign-out-button{
-    font-size: 2rem;
-    padding: 0.9rem 4rem;
-    background-color: transparent;
-    margin-top: 15%;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease-in;
-    border: 0.2rem solid black;
+.sign-out-button {
+  font-size: 2rem;
+  padding: 0.9rem 4rem;
+  background-color: transparent;
+  margin-top: 15%;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in;
+  border: 0.2rem solid black;
 }
 
 .sign-out-button:hover {
-    color: white;
-    background-color: #FF0000;
-    border: 0.2rem solid transparent;
+  color: white;
+  background-color: #ff0000;
+  border: 0.2rem solid transparent;
 }
+
+@media (max-width: 1500px) {
+    .sign-out-button {
+      font-size: 2rem;
+      color: white;
+      background-color: #ff0000;
+      border: 0.2rem solid transparent;
+    }
+  }
+
+@media (max-width: 980px) {
+  .sign-out-button {
+    font-size: 3.5rem;
+    color: white;
+    background-color: #ff0000;
+    border: 0.2rem solid transparent;
+  }
+}
+
+@media (max-width: 768px) {
+    .sign-out-button {
+      font-size: 2.5rem;
+      color: white;
+      background-color: #ff0000;
+      border: 0.2rem solid transparent;
+    }
+  }

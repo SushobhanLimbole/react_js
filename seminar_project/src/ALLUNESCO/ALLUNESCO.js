@@ -2,7 +2,7 @@ import heroSection from '../assets/Italy/henrique-ferreira-RKsLQoSnuTc-unsplash.
 import smallSection from '../assets/all_unesco/31_villa_tivoli.jpg';
 import './ALLUNESCO.css';
 import ContentBox1 from '../ContentBox/ContentBox1';
-import { unescoSlider } from './UnescoSlides';
+import { unescoSlider, unescoSlides } from './UnescoSlides';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
@@ -13,13 +13,29 @@ import Footer from '../Footer/Footer';
 export default function ALLUNESCO() {
 
     const [index, setIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
 
     const handleSelect = (selectedIndex) => {
         setIndex(selectedIndex);
     };
-
+    
+    
     useEffect(() => {
         window.scrollTo(0, 0);
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 1500); // Adjust breakpoint as needed
+        };
+
+        // Initial check on component mount
+        handleResize();
+
+        // Event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     return (
@@ -32,10 +48,11 @@ export default function ALLUNESCO() {
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                 }}
-            ></div>
-            <div className='carousel-caption'>
-                <h1 className='carousel-label'>Venice</h1>
-                <h3 className='carousel-capt'>The Floating City</h3>
+            >
+                <div className='carousel-caption'>
+                    <h1 className='carousel-label'>Venice</h1>
+                    <h3 className='carousel-capt'>The Floating City</h3>
+                </div>
             </div>
 
 
@@ -60,7 +77,14 @@ export default function ALLUNESCO() {
                 <h1>Italy's Stunning UNESCO Sites</h1>
             </div>
 
-            <Carousel activeIndex={index} onSelect={handleSelect} slide={false}>
+            {
+                isMobile ? <div className="unmissable-sites-content inner-container">
+                {
+                    unescoSlides.map((state) => (
+                        <ContentBox1 contentData={state} />
+                    ))
+                }
+            </div> : <Carousel activeIndex={index} onSelect={handleSelect} slide={false}>
                 {
                     unescoSlider.map((slide) => (
                         <Carousel.Item>
@@ -75,6 +99,7 @@ export default function ALLUNESCO() {
                     ))
                 }
             </Carousel>
+            }
 
             <Footer />
         </>

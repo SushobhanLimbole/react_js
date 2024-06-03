@@ -3,6 +3,7 @@ import bullet from '../assets/bullet.png';
 import forward from '../assets/forward.png';
 import { dropContent } from './DropContent';
 import './DropDown.css';
+import close from '../assets/close.png';
 
 
 export default function DropDown(props) {
@@ -13,6 +14,10 @@ export default function DropDown(props) {
     const handleNavigate = (path) => {
         console.log(path);
         navigate(`${path}`);
+    }
+
+    const handleCloseDropDown = () => {
+        props.drop(false);
     }
 
     return (
@@ -65,6 +70,10 @@ export default function DropDown(props) {
                     ))
                 }
             </div >
+            <div className='close-drop' onClick={handleCloseDropDown} style={{
+                backgroundImage: `url(${close})`,
+                backgroundSize: 'cover'
+            }}></div>
         </div >
     );
 }
