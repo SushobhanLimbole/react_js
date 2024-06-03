@@ -1,4 +1,4 @@
-import './ContentBox.css';
+import '../Home/Home.css';
 
 export default function ContentBox(props) {
   console.log('content box called');

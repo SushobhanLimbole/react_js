@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Home/Home';
 import StatePage from './StatePage/StatePage';
-import ContainerSection from './ContainerSecttion/ContainerSection';
 import ALLUNESCO from './ALLUNESCO/ALLUNESCO';
 import ALLCastles from './ALLCastles/AllCastles';
 import ItalianRegion from './ItalianRegion/ItalianRegion';
@@ -21,7 +20,6 @@ function App() {
         <Routes>
           <Route path='/' Component={Home}/>
           <Route path='/state/:data' Component={StatePage}/>
-          <Route path='/sites' Component={ContainerSection}/>
           <Route path='/unesco' Component={ALLUNESCO}/>
           <Route path='/castles' Component={ALLCastles}/>
           <Route path='/region' Component={ItalianRegion}/>

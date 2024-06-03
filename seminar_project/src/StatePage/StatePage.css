@@ -21,31 +21,31 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.info-section{
+.info-section {
   height: 80vh;
   width: 80%;
   margin: auto;
   margin-top: 8%;
-  margin-bottom: 15%;
+  margin-bottom: 8%;
   padding: 2% 0%;
   display: flex;
   justify-content: space-around;
 }
 
-.info-text{
+.info-text {
   width: 50%;
 }
 
-.info-text h1{
+.info-text h1 {
   font-size: 5.7rem;
-  font-family: 'Jost';
+  font-family: "Jost";
 }
 
-.info-text h3{
+.info-text h3 {
   margin-top: 6.5%;
   font-size: 2.6rem;
   font-weight: 400;
-  font-family: 'Jost';
+  font-family: "Jost";
   word-spacing: 0.3rem;
   color: rgba(0, 0, 0, 0.628);
 }
@@ -55,4 +55,202 @@
   width: 35%;
   object-fit: cover;
   border-radius: 2rem;
+}
+
+
+
+
+
+.hero-section {
+  width: 100% !important;
+  height: 92.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  /* Add background-image property if needed */
+}
+
+.hero-section-caption{
+  position: absolute;
+  bottom: 2%;
+  left: 38%;
+  right: 38%;
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.state-banner {
+  height: 40rem; /* 400px converted to REM */
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  /* Add background-image property if needed */
+}
+
+.state-banner h1 {
+  width: 70%;
+  font-size: 4rem; /* 40px converted to REM */
+  font-family: "Montserrat", sans-serif;
+}
+
+.info-section {
+  height: auto; /* Adjusted for responsive height */
+  width: 80%;
+  max-width: 1200px; /* Added maximum width for larger screens */
+  margin: auto;
+  margin-top: 8%;
+  margin-bottom: 10%;
+  padding: 2% 0%;
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-text {
+  width: 100%; /* Full width on smaller screens */
+  max-width: 600px; /* Adjust maximum width as needed */
+  text-align: left;
+  margin-bottom: 2rem; /* Added spacing between sections */
+}
+
+.info-text h1 {
+  font-size: 5.7rem;
+  font-family: "Jost";
+}
+
+.info-text h3 {
+  margin-top: 3%; /* Adjusted spacing for smaller screens */
+  font-size: 2rem; /* Adjusted font size for smaller screens */
+  font-weight: 400;
+  font-family: "Jost";
+  word-spacing: 0.3rem;
+  color: rgba(0, 0, 0, 0.628);
+}
+
+.info-pic {
+  height: 70vh; /* Adjusted height for responsive scaling */
+  /* width: 100%; Full width on smaller screens */
+  width: 35%; /* Adjust maximum width as needed */
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .hero-section h1,
+  .state-banner h1 {
+    font-size: 3.5rem; /* Decreased font size for medium screens */
+  }
+
+  .hero-section-caption{
+    bottom: 2%;
+  }
+
+  .hero-section-label{
+    font-size: 2rem;
+  }
+
+  .info-section {
+    padding: 4% 0%; /* Adjusted padding for better spacing on medium screens */
+  }
+
+  .info-text h1 {
+    font-size: 6rem; /* Decreased font size for medium screens */
+  }
+
+  .info-text h3 {
+    font-size: 3rem; /* Decreased font size for small screens */
+    margin-top: 4%;
+    margin-bottom: 3%; /* Adjusted spacing for medium screens */
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-section h1,
+  .state-banner h1 {
+    font-size: 3.8rem; /* Decreased font size for small screens */
+  }
+
+  .hero-section{
+    height: 75vh;
+  }
+
+  .hero-section-caption{
+    bottom: 2%;
+  }
+
+  .hero-section-label{
+    font-size: 3.5rem;
+  }
+
+  .info-text{
+    text-align: center;
+  }
+
+  .info-section {
+    padding: 4% 0%; /* Adjusted padding for better spacing on small screens */
+  }
+  
+
+  .info-text h1 {
+    font-size: 6rem; /* Decreased font size for small screens */
+  }
+
+  .info-text h3 {
+    font-size: 3rem; /* Decreased font size for small screens */
+    margin-top: 4%;
+    margin-bottom: 3%; /* Adjusted spacing for small screens */
+  }
+
+  .info-pic {
+    height: 30vh;
+    min-width: 55vw;
+    max-width: 55vw; /* Decreased maximum width for small screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section h1,
+  .state-banner h1 {
+    font-size: 2.7rem; /* Further decreased font size for extra small screens */
+  }
+
+  .state-banner{
+    height: 30rem;
+  }
+
+  .hero-section-caption{
+    bottom: 3%;
+  }
+
+  .info-section {
+    padding: 5% 0%; /* Adjusted padding for better spacing on extra small screens */
+  }
+
+  .info-text h1 {
+    font-size: 4rem; /* Decreased font size for extra small screens */
+  }
+
+  .info-text h3 {
+    font-size: 2rem; /* Decreased font size for extra small screens */
+    margin-top: 4%; /* Adjusted spacing for extra small screens */
+    margin-bottom: 5%;
+  }
+
+  .info-pic {
+    height: 27vh;
+    min-width: 65vw;
+    max-width: 65vw; /* Decreased maximum width for small screens */
+  }
 }

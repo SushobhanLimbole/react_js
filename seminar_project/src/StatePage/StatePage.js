@@ -128,9 +128,11 @@ export default function StatePage() {
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                 }}
-            ></div>
-            <div className='carousel-caption'>
-                <h1 className='carousel-label'>{state.name}</h1>
+            >
+                <div className='hero-section-caption'>
+                    <h1 className='hero-section-label'>{state.name}</h1>
+                </div>
+
             </div>
 
             <div className="state-banner" style={{

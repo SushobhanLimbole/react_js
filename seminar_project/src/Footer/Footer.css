@@ -25,7 +25,7 @@
 }
 
 .footer-inner-column {
-  width: 20vw;
+  width: 60%;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -71,4 +71,178 @@
   height: 2rem;
   width: 2rem;
   background-size: cover;
+}
+
+
+
+
+
+
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+  margin-top: 15%;
+  background-color: #020b5a;
+  padding-bottom: 2.5%;
+}
+
+.footer-inner-section {
+  padding: 2% 3.5%;
+  color: white;
+  display: flex;
+  flex-wrap: wrap; /* Added to wrap columns on smaller screens */
+  justify-content: space-around;
+  align-items: start;
+  font-size: 2rem; /* Adjusted font size for smaller screens */
+  font-family: "Jost";
+}
+
+.footer-img {
+  height: 50vh; /* Adjusted to maintain aspect ratio */
+  width: 100%; /* Full width on smaller screens */
+  max-width: 40rem; /* Max width to prevent stretching on larger screens */
+  border-radius: 1.5rem;
+  margin-bottom: 2%; /* Added space between image and text */
+}
+
+.footer-inner-column {
+  width: 100%; /* Full width on smaller screens */
+  max-width: 60%; /* Max width to control content width */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-inner-column h1 {
+  font-size: 1.8rem; /* Adjusted font size for smaller screens */
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.footer-inner-column a {
+  margin-top: 1rem; /* Reduced margin for links */
+  font-size: 1.6rem; /* Adjusted font size for smaller screens */
+  text-decoration: none;
+  color: white;
+}
+
+.footer-inner-column a:hover {
+  color: #0d6efd;
+}
+
+.social-media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-section h1 {
+  font-size: 1.6rem; /* Adjusted font size for smaller screens */
+  font-family: "Jost";
+  margin-bottom: 1rem; /* Reduced margin for heading */
+  color: white;
+}
+
+.social-media-inner-section {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-media-icon {
+  height: 2.5rem; /* Increased icon size for better visibility */
+  width: 2.5rem; /* Increased icon size for better visibility */
+  background-size: cover;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 980px) {
+  .footer-section {
+    margin-top: 15%; /* Adjusted top margin for smaller screens */
+    padding: 2.5% 1%;
+  }
+
+  .footer-inner-section {
+    font-size: 1.8rem; /* Further reduced font size for smaller screens */
+  }
+
+  .footer-img {
+    max-width: 100%; /* Full width for images on smaller screens */
+  }
+  
+  .footer-inner-column {
+    height: 50%;
+    max-width: 100%; /* Full width for content columns on smaller screens */
+    margin-top: 5%;
+  }
+  
+  .footer-inner-column h1 {
+    font-size: 2.5rem; /* Further reduced font size for smaller screens */
+  }
+  
+  .footer-inner-column a {
+    font-size: 2rem; /* Further reduced font size for smaller screens */
+  }
+  
+  .social-media-section{
+    margin-bottom: 2%;
+  }
+
+  .social-media-section h1 {
+    font-size: 2rem; /* Further reduced font size for smaller screens */
+  }
+  
+  .social-media-inner-section{
+    gap: 2rem;
+  }
+  
+  .social-media-icon {
+    height: 2.5rem; /* Adjusted icon size for smaller screens */
+    width: 2.5rem; /* Adjusted icon size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    margin-top: 15%; /* Adjusted top margin for smaller screens */
+    padding: 2.5% 1%;
+  }
+
+  .footer-inner-section {
+    font-size: 1.8rem; /* Further reduced font size for smaller screens */
+  }
+
+  .footer-img {
+    max-width: 100%; /* Full width for images on smaller screens */
+  }
+
+  .footer-inner-column {
+    height: 50%;
+    max-width: 100%; /* Full width for content columns on smaller screens */
+
+  }
+
+  .footer-inner-column h1 {
+    font-size: 1.8rem; /* Further reduced font size for smaller screens */
+  }
+
+  .footer-inner-column a {
+    font-size: 1.7rem; /* Further reduced font size for smaller screens */
+  }
+
+  .social-media-section{
+    margin-bottom: 2%;
+    margin-top: 1%;
+  }
+
+  .social-media-section h1 {
+    font-size: 1.8rem; /* Further reduced font size for smaller screens */
+  }
+
+  .social-media-icon {
+    height: 2rem; /* Adjusted icon size for smaller screens */
+    width: 2rem; /* Adjusted icon size for smaller screens */
+  }
 }

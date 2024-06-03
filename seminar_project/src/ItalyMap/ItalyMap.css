@@ -30,7 +30,7 @@ path.selected {
   text-decoration: none;
 }
 
-.anchor{
+.anchor {
   text-decoration: none;
   color: inherit;
 }
@@ -43,7 +43,6 @@ path.selected {
   border-top-right-radius: 1rem;
   object-fit: cover;
 }
-
 
 .map-content-name {
   font-family: "Montserrat";
@@ -72,3 +71,76 @@ path.selected {
   text-decoration: none;
 }
 
+@media (max-width: 1200px) {
+  .map-content {
+    height: 38rem;
+    width: 40rem;
+    font-size: 1.3rem;
+  }
+
+  .map-content-name h1 {
+    font-size: 2.2rem;
+  }
+
+  .map-content-name p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .map-content {
+    height: 50%;
+    width: 60%;
+    font-size: 1.2rem;
+    margin: auto;
+    margin-top: 8%;
+  }
+
+  .map-content-name h1 {
+    font-size: 3.5rem;
+  }
+
+  .map-content-name p {
+    font-size: 2rem;
+  }
+
+  .map-resize{
+    padding: 0 6rem;
+    width: 90%;
+    height: 50vh;
+    margin-bottom: 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-content {
+    height: 50%;
+    width: 60%;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    margin: auto;
+    margin-top: 8%;
+  }
+
+  .map-content img {
+    height: 60%;
+  }
+
+  .map-content-name {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .map-content-name h1 {
+    font-size: 3.5rem;
+  }
+
+  .map-content-name p {
+    font-size: 2rem;
+  }
+
+  .map-resize {
+    padding: 0 12rem;
+    width: 90%;
+  }
+}

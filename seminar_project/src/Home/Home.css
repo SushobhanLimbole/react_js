@@ -1,4 +1,380 @@
+/* .quote-banner {
+  height: 40rem; 
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  
+}
 
+.quote-banner h1 {
+  font-weight: 600;
+  width: 70%;
+  font-size: 4rem; 
+  font-family: "Montserrat", sans-serif;
+}
+
+.destinations h3 {
+  margin-top: 10rem; 
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.63);
+}
+
+.destinations h1 {
+  margin-top: 1rem; 
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-size: 4rem; 
+}
+
+.inner-container {
+  width: 80vw;
+  margin: auto;
+}
+
+.unmissable-sites-content {
+  margin-top: 4%;
+  height: 160vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; 
+  justify-content: space-evenly;
+}
+
+.dest-bar {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5% !important;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-links h2 {
+  font-family: "Jost", sans-serif;
+  color: rgb(83, 79, 79);
+  font-size: 2.3rem; 
+  font-weight: 400;
+}
+
+.underline {
+  width: 0rem; 
+  height: 0.23rem; 
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-links:hover .underline {
+  background-color: #020b5a;
+  width: 100%; 
+}
+
+.map-before h3{
+  margin-top: 15%; 
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.63);
+}
+
+.map-before h1 {
+  margin-top: 1rem; 
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-size: 4rem; 
+}
+
+.map-section{
+  margin-top: 7% !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width:980px) {
+    html{
+      font-size: 40%;
+    }
+} */
+
+.quote-banner {
+  height: 40rem;
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.quote-banner h1 {
+  font-weight: 600;
+  width: 70%;
+  font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.destinations h3 {
+  margin-top: 10rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.63);
+}
+
+.destinations h1 {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+}
+
+.inner-container {
+  width: 80vw;
+  margin: auto;
+}
+
+.unmissable-sites-content {
+  margin-top: 4%;
+  height: 160vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+}
+
+.dest-bar {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5% !important;
+  flex-direction: row;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-links h2 {
+  font-family: "Jost", sans-serif;
+  color: rgb(83, 79, 79);
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.underline {
+  width: 0rem;
+  height: 0.23rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-links:hover .underline {
+  background-color: #020b5a;
+  width: 100%;
+}
+
+.map-before h3 {
+  margin-top: 15%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.63);
+}
+
+.map-before h1 {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+}
+
+.map-section {
+  margin-top: 7% !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+  .quote-banner h1 {
+    font-size: 3.5rem;
+  }
+
+  .destinations h1,
+  .map-before h1 {
+    font-size: 3.5rem;
+  }
+
+  .destinations h3,
+  .map-before h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 980px) {
+  html {
+    font-size: 40%;
+  }
+
+  .quote-banner {
+    height: 30rem;
+  }
+
+  .quote-banner h1 {
+    font-size: 3rem;
+    width: 90%;
+  }
+
+  .destinations h1,
+  .map-before h1 {
+    font-size: 3rem;
+  }
+
+  .destinations h3,
+  .map-before h3 {
+    font-size: 1.6rem;
+  }
+
+  .inner-container {
+    width: 90vw;
+  }
+
+  .unmissable-sites-content {
+    height: auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .dest-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .map-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .quote-banner {
+    height: 20rem; /* 200px */
+  }
+
+  .quote-banner h1 {
+    font-size: 2.5rem; /* 25px */
+  }
+
+  .destinations h1,
+  .map-before h1 {
+    font-size: 2.5rem; /* 25px */
+  }
+
+  .destinations h3,
+  .map-before h3 {
+    font-size: 1.4rem; /* 14px */
+  }
+
+  .unmissable-sites-content {
+    height: auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .dest-bar {
+    flex-direction: row;
+  }
+
+  .map-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.content {
+  height: 52rem;
+  width: 38rem;
+  border-radius: 1rem;
+  border: 0.1rem solid rgba(72, 67, 67, 0.288);
+  box-sizing: border-box;
+  box-shadow: 0rem 0rem 1rem 0rem rgba(72, 67, 67, 0.288);
+  transition: all 0.4s ease;
+}
+
+.content img {
+  height: 72%;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+}
+
+.content:hover {
+  transform: scale(1.02);
+  box-shadow: 0rem 0rem 2rem 0rem rgba(72, 67, 67, 0.288);
+}
+
+.content-name {
+  font-family: "Montserrat";
+  text-align: left;
+  height: 28%;
+  width: 100%;
+  padding: 1rem 1.2rem;
+}
+
+.content-name h1 {
+  font-size: 2.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.content-name p {
+  text-align: start;
+  color: #5d646b;
+  height: 45%;
+  width: calc(100% - 2rem);
+  font-size: 1.3rem;
+  overflow: hidden;
+}
+
+.content-name h3 {
+  color: #5d646b;
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.location-on {
+  font-size: 1.2rem;
+}
+
+/* Base Styles */
 .quote-banner {
   height: 40rem; /* 400px converted to REM */
   font-family: "Montserrat";
@@ -48,6 +424,26 @@
   flex-wrap: wrap;
   gap: 1.5rem; /* 15px converted to REM */
   justify-content: space-evenly;
+  position: relative;
+}
+
+.see-more-button {
+  font-size: 2rem;
+  padding: 0.9rem 4rem;
+  background-color: transparent;
+  margin-top: 15%;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in;
+  border: 0.2rem solid black;
+  position: absolute;
+  right: 1rem;
+  bottom: -2.2rem;
+}
+
+.see-more-button:hover {
+  color: white;
+  background-color: #0058a5;
+  border: 0.2rem solid transparent;
 }
 
 .dest-bar {
@@ -81,7 +477,7 @@
   width: 100%; /* 100px converted to REM */
 }
 
-.map-before h3{
+.map-before h3 {
   margin-top: 15%; /* 100px converted to REM */
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -99,27 +495,273 @@
   font-size: 4rem; /* 40px converted to REM */
 }
 
-.map-section{
+.map-section {
   margin-top: 7% !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 90%;
+  margin: auto;
 }
 
-@media (max-width:980px) {
-    html{
-      font-size: 40%;
-    }
+/* Responsive Styles */
+
+.content {
+  height: 52rem; /* 520px converted to REM */
+  width: 38rem; /* 380px converted to REM */
+  border-radius: 1rem; /* 10px converted to REM */
+  border: 0.1rem solid rgba(72, 67, 67, 0.288);
+  box-sizing: border-box;
+  box-shadow: 0rem 0rem 1rem 0rem rgba(72, 67, 67, 0.288);
+  transition: all 0.4s ease;
 }
 
-/* footer {
+.content img {
+  height: 72%;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+}
+
+.content:hover {
+  transform: scale(1.02);
+  box-shadow: 0rem 0rem 2rem 0rem rgba(72, 67, 67, 0.288);
+}
+
+.content-name {
+  font-family: "Montserrat";
+  text-align: left;
+  height: 28%;
+  width: 100%;
+  padding: 1rem 1.2rem;
+}
+
+.content-name h1 {
+  font-size: 2.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.content-name p {
+  text-align: start;
+  color: #5d646b;
+  height: 45%;
+  width: calc(100% - 2rem);
+  font-size: 1.3rem;
+  overflow: hidden;
+}
+
+.content-name h3 {
+  color: #5d646b;
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.location-on {
+  font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 1200px) {
+  .content {
+    min-width: 40rem; /* Keep maximum width consistent */
+    height: 50rem; /* Allow height to adjust based on content */
+    box-shadow: 0rem 0rem 0.5rem 0rem rgba(72, 67, 67, 0.288);
+    margin-right: 2rem;
+  }
+
+  .quote-banner h1 {
+    font-size: 3.5rem; /* 35px */
+  }
+
+  .destinations h1,
+  .map-before h1 {
+    font-size: 3.5rem; /* 35px */
+  }
+
+  .destinations h3,
+  .map-before h3 {
+    font-size: 1.8rem; /* 18px */
+  }
+
+  .unmissable-sites-content {
+    height: auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 90%;
+    margin: auto;
+    padding: 3% 2%;
+  }
+
+  .see-more-button {
+    position: static;
+    height: 50rem;
+    bottom: 7.5rem;
+    color: white;
+    background-color: #0058a5;
+    border: 0.2rem solid transparent;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+    min-width: 40rem; /* Keep maximum width consistent */
+    height: 50rem; /* Allow height to adjust based on content */
+    box-shadow: 0rem 0rem 0.5rem 0rem rgba(72, 67, 67, 0.288);
+    margin-right: 2rem;
+  }
+
+  .quote-banner h1 {
+    font-size: 3.5rem; /* 35px */
+  }
+
+  .destinations h1,
+  .map-before h1 {
+    font-size: 3.5rem; /* 35px */
+  }
+
+  .destinations h3,
+  .map-before h3 {
+    font-size: 1.8rem; /* 18px */
+  }
+
+  .unmissable-sites-content {
+    height: auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 90%;
+    margin: auto;
+    padding: 3% 2%;
+  }
+
+  .see-more-button {
+    position: static;
+    height: 50rem;
+    bottom: 7.5rem;
+    color: white;
+    background-color: #0058a5;
+    border: 0.2rem solid transparent;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .content {
+    min-width: 45rem; /* Keep maximum width consistent */
+    height: 60rem; /* Allow height to adjust based on content */
+    box-shadow: 0rem 0rem 0.5rem 0rem rgba(72, 67, 67, 0.288);
+    margin-right: 2rem;
+  }
+
+  .unmissable-sites-content {
+    height: auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 90%;
+    margin: auto;
+    padding: 3% 2%;
+  }
+
+  .content-name h1 {
+    font-size: 2.3rem; /* Decrease font size for smaller screens if necessary */
+  }
+
+  .content-name p {
+    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+  }
+
+  .content-name h3 {
+    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+  }
+
+  .location-on {
+    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+  }
+
+  .see-more-button {
+    position: static;
+    height: 60rem;
+    bottom: 7.5rem;
+    color: white;
+    background-color: #0058a5;
+    border: 0.2rem solid transparent;
+    margin-top: 0;
+  }
+}
+
+/* @media (max-width: 600px) {
+  .quote-banner {
+    height: 20rem; 
+  }
   
-}
-
-footer h1{
-  font-weight: 400;
+  .quote-banner h1 {
+    font-size: 1.9rem !important ; 
+  }
+  
+  .destinations h1, .map-before h1 {
+    font-size: 2.5rem; 
+  }
+  
+  .destinations h3, .map-before h3 {
+    font-size: 1.4rem; 
+  }
+  
+  .unmissable-sites-content {
+    height: auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 90%;
+    margin: auto;
+    padding: 3% 2%;
+  }
+  
+  .dest-bar {
+    flex-direction: row;
+    margin-bottom: 3%;
+  }
+  
+  .map-section {
+    flex-direction: column;
+    align-items: center;
+  }
 } */
 
-.footer-banner{
-  height: 10vh;
+@media (max-width: 768px) {
+  .content {
+    min-width: 38rem; /* Keep maximum width consistent */
+    height: 55rem; /* Allow height to adjust based on content */
+    box-shadow: 0rem 0rem 0.5rem 0rem rgba(72, 67, 67, 0.288);
+  }
+
+  .content-name h1 {
+    font-size: 2.3rem; /* Decrease font size for smaller screens if necessary */
+  }
+
+  .content-name p {
+    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+  }
+
+  .content-name h3 {
+    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+  }
+
+  .location-on {
+    font-size: 1.2rem; /* Decrease font size for smaller screens if necessary */
+  }
+
+  .see-more-button {
+    position: static;
+    height: 55rem;
+    bottom: 7.5rem;
+    color: white;
+    background-color: #0058a5;
+    border: 0.2rem solid transparent;
+    margin-top: 0;
+  }
 }

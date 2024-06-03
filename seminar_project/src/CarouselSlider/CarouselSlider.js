@@ -11,9 +11,10 @@ export default function CarouselSlider() {
         slides.map((slide) => (
           <Carousel.Item interval={3000}>
             <div
+
+              className='carousel-slider'
+
               style={{
-                height: '92.5vh',
-                width: '100%',
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'

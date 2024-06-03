@@ -1,5 +1,4 @@
 import "./Home.css";
-import NavBar from '../NavBar/NavBar';
 import ItalyMap from "../ItalyMap/ItalyMap";
 import CarouselSlider from "../CarouselSlider/CarouselSlider";
 import { foodNavContent } from "./nav_content";
@@ -9,6 +8,8 @@ import UNESCONav from "../NavContent/UNESCONav";
 import CastlesNav from "../NavContent/CastlesNav";
 import banner from '../assets/banner/quote_banner_1.webp';
 import Footer from "../Footer/Footer";
+import ItalyMobileMap from "../ItalyMap/ItalyMobile";
+import MapSection from "../ItalyMap/MapSection";
 
 
 export default function Home() {
@@ -81,9 +82,14 @@ export default function Home() {
         <h1>Discover Italy</h1>
       </div>
 
-      <div className="map-section inner-container">
+      {/* <div className="map-section inner-container">
         <ItalyMap />
-      </div>
+        <ItalyMobileMap/>
+      </div> */}
+
+      {
+        <MapSection/>
+      }
 
       <Footer/>
       
