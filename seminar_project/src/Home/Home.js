@@ -1,5 +1,4 @@
 import "./Home.css";
-import ItalyMap from "../ItalyMap/ItalyMap";
 import CarouselSlider from "../CarouselSlider/CarouselSlider";
 import { foodNavContent } from "./nav_content";
 import { useState } from "react";
@@ -8,7 +7,6 @@ import UNESCONav from "../NavContent/UNESCONav";
 import CastlesNav from "../NavContent/CastlesNav";
 import banner from '../assets/banner/quote_banner_1.webp';
 import Footer from "../Footer/Footer";
-import ItalyMobileMap from "../ItalyMap/ItalyMobile";
 import MapSection from "../ItalyMap/MapSection";
 
 
