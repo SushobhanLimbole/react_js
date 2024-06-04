@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Category.css';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-// import AddButton from '../Buttons/AddButton';
 import AddTile from '../Tile Operations/AddTile';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';

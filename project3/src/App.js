@@ -1,3 +1,4 @@
+import Search from "./Search";
 import Footer from "./footer";
 import Home from "./home";
 import Navbar from "./navbar";
@@ -11,9 +12,10 @@ function App() {
     // </>
 
     <>
-      <Navbar/>
+      {/* <Navbar/>
       <Home/>
-      <Footer/>
+      <Footer/> */}
+      <Search/>
     </>
   );
 }

@@ -1,10 +1,11 @@
-import Profile from "./profile";
+import Carousel from "./Carousel";
+// import Profile from "./profile";
 
 
 function App() {
   return (
     <>
-      <Profile/>
+      <Carousel/>
     </>
   );
 }
