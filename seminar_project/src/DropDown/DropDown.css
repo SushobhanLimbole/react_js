@@ -86,7 +86,7 @@
 @media screen and (max-width: 980px) {
   .drop-down {
     padding: 1.5rem 2rem;
-    top: 5vh; /* Adjust top positioning for smaller screens */
+    top: 4.9vh; /* Adjust top positioning for smaller screens */
   }
 
   .drop-down-title {
@@ -135,7 +135,7 @@
 @media screen and (max-width: 768px) {
   .drop-down {
     padding: 1.5rem 1.5rem;
-    top: 5.6vh; /* Adjust top positioning for smaller screens */
+    top: 6.4vh; /* Adjust top positioning for smaller screens */
   }
 
   .drop-down-title {

@@ -419,10 +419,10 @@
 
 .unmissable-sites-content {
   margin-top: 4%;
-  height: 130vh;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem; /* 15px converted to REM */
+  gap: 2rem; /* 15px converted to REM */
   justify-content: space-evenly;
   position: relative;
 }
@@ -437,7 +437,7 @@
   border: 0.2rem solid black;
   position: absolute;
   right: 1rem;
-  bottom: -3.5rem;
+  bottom: -7.5rem;
 }
 
 .see-more-button:hover {
