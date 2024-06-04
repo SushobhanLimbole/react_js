@@ -1,69 +1,3 @@
-/* .login-page{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-outer-container{
-    height: 65%;
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.-2.6436);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.3px);
-    -webkit-backdrop-filter: blur(6.3px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.login-inner-container{
-    height: 80%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Jost", sans-serif;
-}
-
-.login-inner-container h1{
-    color: rgb(255, 255, 255);
-    letter-spacing: 5px;
-    font-family: "Jost", sans-serif;
-    font-size: 50px;
-    font-weight: 300;
-    margin-bottom: 10%;
-}
-
-
-
-.input-container{
-    height: 8%;
-    width: 70%;
-    margin-bottom: 5%;
-    color: white;
-    font-size: medium;
-    background-color: transparent;
-    padding: 5px 6px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.553);
-}
-
-.login-button{
-    margin-top: 10%;
-    font-family: "Jost", sans-serif;
-    background-color: #36be6c;
-    color: rgb(255, 255, 255);
-    font-size: larger;
-    border-radius: 3px;
-    padding: 9px 50px;
-    border: 1px solid transparent;
-} */
-
 .login-page {
   height: 92.4vh;
   width: 100vw;
@@ -147,7 +81,12 @@
 
 @media (max-width: 1500px) {
   .login-page {
-    height: 92vh;
+    height: 96vh;
+  }
+
+  .login-outer-container {
+    width: 55%;
+    height: 60%;
   }
 
   .login-inner-container {
@@ -171,9 +110,44 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .login-page {
+    height: 96vh;
+  }
+
+  .login-outer-container {
+    width: 65%;
+    height: 45%;
+  }
+
+  .login-inner-container {
+    width: 80%;
+  }
+
+  .login-inner-container h1 {
+    font-size: 6rem;
+  }
+
+  .input-container {
+    font-size: 2.8rem;
+  }
+
+  .route-to-sign-up h3 {
+    font-size: 2.5rem;
+  }
+
+  .route-to-sign-up a {
+    font-size: 2.5rem;
+  }
+
+  .login-button {
+    font-size: 3rem;
+  }
+}
+
 @media (max-width: 980px) {
   .login-page {
-    height: 95vh;
+    height: 96vh;
   }
 
   .login-outer-container {
@@ -208,12 +182,12 @@
 
 @media (max-width: 768px) {
   .login-page {
-    height: 86vh;
+    height: 96vh;
   }
 
   .login-outer-container {
     width: 80%;
-    height: 50%;
+    height: 40%;
   }
 
   .login-inner-container {

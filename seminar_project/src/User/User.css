@@ -1,89 +1,11 @@
-/* .user-page {
-  height: 92.5vh;
-  width: 100vw;
-  display: flex;
-}
-
-.right-section {
-  height: 92.5vh;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-}
-
-.right-section img {
-  height: 100%;
-  width: 100%;
-}
-
-.user-overlay {
-  position: absolute;
-  font-family: "Jost", sans-serif;
-  font-size: 5rem;
-  color: white;
-  letter-spacing: 2px;
-}
-
-.user-overlay h1 {
-  font-weight: 400;
-  font-size: 7rem;
-}
-
-.left-section {
-  height: 100%;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  font-family: "Jost", sans-serif;
-}
-
-.user-container {
-  height: 80%;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-.user-container h2 {
-  font-size: 3.6rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  color: rgba(128, 128, 128, 0.826);
-  margin-bottom: 1.5rem;
-}
-
-.user-container h1 {
-  font-size: 50px;
-  letter-spacing: 3px;
-  margin-bottom: 2rem;
-}
-
-.user-container h3 {
-  font-family: "Jost", sans-serif;
-  font-size: 2.5rem;
-}
-
-.pic {
-  height: 15rem;
-  width: 15rem;
-  border-radius: 50%;
-  margin-bottom: 10%;
-} */
-
 .user-page {
-  height: 92.5vh;
+  height: 94.5vh;
   width: 100vw;
   display: flex;
 }
 
 .right-section {
-  height: 92.5vh;
+  height: 100%;
   width: 60%;
   display: flex;
   justify-content: center;
@@ -196,7 +118,7 @@
   .user-container h2 {
     font-size: 3.5rem; /* Adjusted for smaller screens */
     letter-spacing: 0.1rem; /* Adjusted for smaller screens */
-    color: #1C1678;
+    color: #1c1678;
   }
 
   .user-container h1 {
@@ -215,9 +137,8 @@
   }
 }
 
-
 @media (max-width: 980px) {
-  .user-page{
+  .user-page {
     height: 95vh;
   }
   /* Adjust styles for tablets and smaller devices */
@@ -263,7 +184,7 @@
   .user-container h2 {
     font-size: 4.5rem; /* Adjusted for smaller screens */
     letter-spacing: 0.1rem; /* Adjusted for smaller screens */
-    color: #1C1678;
+    color: #1c1678;
   }
 
   .user-container h1 {
@@ -282,10 +203,8 @@
   }
 }
 
-
 @media (max-width: 768px) {
-
-  .user-page{
+  .user-page {
     height: 94.5vh;
   }
   /* Adjust styles for tablets and smaller devices */
@@ -331,7 +250,7 @@
   .user-container h2 {
     font-size: 3.7rem; /* Adjusted for smaller screens */
     letter-spacing: 0.1rem; /* Adjusted for smaller screens */
-    color: #1C1678;
+    color: #1c1678;
   }
 
   .user-container h1 {

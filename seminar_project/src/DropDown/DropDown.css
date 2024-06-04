@@ -160,7 +160,7 @@
 @media screen and (max-width: 980px) {
   .drop-down {
     padding: 1.5rem 2rem;
-    top: 3.5vh; /* Adjust top positioning for smaller screens */
+    top: 5.1vh; /* Adjust top positioning for smaller screens */
   }
 
   .drop-down-title {

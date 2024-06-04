@@ -1,5 +1,4 @@
 import { useLocation } from 'react-router-dom';
-import heroSection from '../assets/collo.jpg';
 import './StatePage.css';
 import { useEffect, useState } from 'react';
 import ContentBox1 from '../ContentBox/ContentBox1';
@@ -148,7 +147,7 @@ export default function StatePage() {
                     <h1>{state.title}</h1>
                     <h3>{state.longDesc}</h3>
                 </div>
-                <img className='info-pic' src={heroSection} />
+                <img className='info-pic' src={state.image} />
             </div>
 
             {
