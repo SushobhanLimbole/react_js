@@ -1,10 +1,16 @@
 import DeleteCards from "../DeleteCards/DeleteCards";
 import tab from '../../Assets/tab-bg.webp';
 import content from '../../Assets/content.webp';
-import Fab from '@mui/material/Fab';
-import AddIcon from '@mui/icons-material/Add';
+import { useNavigate } from "react-router-dom";
 
 export default function MultipleDelete() {
+
+    const navigate = useNavigate();
+
+    const navigateHome = () => {
+        navigate('/');
+    }
+
     return (
         <div className="main-container" style={{
             backgroundImage: `url(${content})`,
@@ -20,7 +26,7 @@ export default function MultipleDelete() {
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
             }}>
-                Books
+                <h1 onClick={navigateHome}>Books</h1>
                 <div className='task-button-section'>
                     <button className='delete-all-button'>
                         Delete All

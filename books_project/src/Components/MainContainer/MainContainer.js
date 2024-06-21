@@ -28,7 +28,7 @@ export default function MainContainer() {
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
             }}>
-            Books
+                <h1>Books</h1>
                 <div className='task-button-section'>
                     <button className='task-button'>
                         <span class="material-symbols-outlined">
