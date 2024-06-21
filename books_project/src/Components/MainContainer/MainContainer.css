@@ -1,0 +1,135 @@
+.main-container {
+    height: 99vh;
+    width: 99.4vw;
+    border-radius: 1rem;
+    border: 0.1rem solid black;
+    background-color: white;
+}
+
+.tab-section{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: white;
+    padding: 1rem 0rem;
+    position: relative;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: "Playwrite US Trad";
+}
+
+.task-button-section{
+    display: flex;
+    position: absolute;
+    right: 1%;
+    top: 24%;
+}
+
+.delete-all-button{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Jost';
+    background-color: rgb(151, 79, 239);
+    padding: 0.2rem 1rem;
+    border-radius: 0.3rem;
+    border: 0.2rem solid transparent;
+    transition: all 0.4s ease;
+}
+
+.task-button{
+    color: white;
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 15%;
+    border: 0.2rem solid transparent;
+    background-color: rgb(151, 79, 239);
+    transition: all 0.4s ease;
+}
+
+.task-button:hover , .delete-all-button:hover{
+    color: rgb(151, 79, 239);
+    background-color: transparent;
+    border: 0.2rem solid rgb(151, 79, 239);
+}
+
+.nav-link{
+    color: white;
+    padding-bottom: 0.6rem;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    border-right: 0.1rem solid black;
+    border-left: 0.1rem solid black;
+    border-top: 0.1rem solid black;
+}
+
+.content-section{
+    height: 89.5%;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.guide {
+    width: 99%;
+    display: flex;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    font-family: 'Jost';
+    border-radius: 0.3rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.142);
+    background-color: white;
+}
+
+.guide h2{
+    font-size: 2.4rem;
+    font-weight: 500;
+    width: 31.25%;
+    display: flex;
+    align-items: center;
+}
+
+.delete-guide {
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+    padding: 1rem 0rem;
+    padding-left: 10%;
+    font-family: 'Jost';
+    border-radius: 0.3rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.142);
+    background-color: white;
+    padding-right: 0;
+}
+
+.delete-guide h2{
+    font-size: 2.4rem;
+    font-weight: 500;
+    width: 27%;
+    display: flex;
+    align-items: center;
+}
+
+.add-button{
+    padding: 2rem;
+    font-size: 150%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    color: white;
+    background-color: rgb(151, 79, 239);
+    border: 0.01px solid #00000020;
+    box-shadow: 0px 0px 5px #00000068;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

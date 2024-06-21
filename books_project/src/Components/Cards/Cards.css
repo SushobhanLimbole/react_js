@@ -1,0 +1,37 @@
+.card {
+    width: 99%;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+.card-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+}
+
+.card-content h2{
+    font-family: "Jost", sans-serif;
+    width: 25%;
+    font-weight: 400;
+}
+
+.card-buttons-container{
+    display: flex;
+}
+
+.card-button {
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    background-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.card-button:hover{
+    background-color: rgba(151, 79, 239, 0.699); 
+    /* color: white; */
+}
