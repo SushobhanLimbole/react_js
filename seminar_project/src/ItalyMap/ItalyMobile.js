@@ -3,21 +3,7 @@ import './ItalyMap.css';
 import { statesInfo } from './StatesData';
 import { Link, useNavigate } from 'react-router-dom';
 
-
 function ItalyMobileMap() {
-
-	const handleTapp = (stateIndex) => {
-		if (tapTimeout) {
-			clearTimeout(tapTimeout);
-			setTapTimeout(null);
-			navigate(`/state/${statesInfo[stateIndex].name.toLowerCase()}`, { state: statesInfo[stateIndex] });
-		} else {
-			setTapTimeout(setTimeout(() => {
-				setCurrentData(statesInfo[stateIndex]);
-				setTapTimeout(null);
-			}, 100)); // Adjust the delay as needed
-		}
-	};
 
 	const [currentData, setCurrentData] = useState(statesInfo[0]);
 	const navigate = useNavigate();
@@ -30,12 +16,6 @@ function ItalyMobileMap() {
 	const handleDoubleClick = (stateIndex) => {
 		navigate(`/state/${statesInfo[stateIndex].name.toLowerCase()}`, { state: statesInfo[stateIndex] });
 	};
-
-	const [tapTimeout, setTapTimeout] = useState(null);
-
-	// to={`/state/${statesInfo[13].name.toLowerCase()}`} state={statesInfo[13]}
-
-	// const handleTap = useTap(() => handleSingleTap(13), () => handleDoubleTap(13));
 
 	return (
 		<>
@@ -668,7 +648,7 @@ function ItalyMobileMap() {
 
 
 			<Link className='anchor' to={`/state/${currentData}`} state={currentData}><div className="map-content">
-				<img src={currentData.image} />
+				<img src={currentData.image} alt={currentData.name}/>
 				<div className="map-content-name">
 					<h1>{currentData.name}</h1>
 					<p>{currentData.desc}</p>
