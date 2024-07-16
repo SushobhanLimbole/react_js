@@ -28,8 +28,20 @@ export default function LoginPage() {
           alert('User logged in sucessfully');
           navigate('/');
         } catch (error) {
-          console.error(error);
-          alert('Invalid credential');
+
+            if (error.code === "auth/invalid-email") { 
+                alert('Invalid email');
+            }
+
+            if (error.code === 'auth/missing-password') {
+                alert('Please enter your password');
+            }
+
+            if (error.code === 'auth/invalid-credential') {
+                alert('Invalid credentials');
+            }
+          console.error(error.code);
+
         }
       };
 

@@ -3,7 +3,7 @@ import loginimg from '../assets/states data/sicily_.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { addUser, firebaseAuth } from '../Firebase/Firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth/web-extension';
+import { createUserWithEmailAndPassword, EmailAuthCredential } from 'firebase/auth/web-extension';
 import { updateProfile } from 'firebase/auth';
 
 export default function SignUp() {
@@ -28,29 +28,48 @@ export default function SignUp() {
         setPassword(event.target.value);
     }
 
-    // const handleSignUp = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //       await createUserWithEmailAndPassword(firebaseAuth, email, password);
-    //       await addUser(userName , email);
-    //       alert('User created successfully')
-    //     } catch (error) {
-    //       console.error(error);
-    //     }
-    //   };
-
     const handleSignUp = async (e) => {
-        console.log('sign up mathod called');
+
+        console.log('sign up method called');
         e.preventDefault();
         try {
-            const userCredential = await createUserWithEmailAndPassword(firebaseAuth, email, password);
-            const user = userCredential.user;
-            await updateProfile(user, { displayName: userName });
-            alert('User created successfully');
-            navigate('/'); // Redirect to home or login page
+
+            if (userName === '') {
+                alert('Please enter you username');
+            } else {
+                const userCredential = await createUserWithEmailAndPassword(firebaseAuth, email, password);
+                const user = userCredential.user;
+                await updateProfile(user, { displayName: userName });
+                alert('User created successfully');
+                navigate('/');  
+            }
+
+
         } catch (error) {
-            console.error(error);
+
+            if (error.code === "auth/missing-email") { 
+                alert('Please enter your email');
+            }
+
+            if (error.code === "auth/invalid-email") { 
+                alert('Invalid email');
+            }
+
+            if(error.code === 'auth/email-already-in-use'){
+                alert('Email already in use');
+            }
+
+            if (error.code === 'auth/missing-password') {
+                alert('Please enter your password');
+            }
+
+            if (error.code === 'auth/weak-password') {
+                alert('Password should be atleast of 6 characters');
+            }
+
+            console.error(error.code);
         }
+        
     };
 
     return (
