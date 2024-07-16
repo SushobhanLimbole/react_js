@@ -1,6 +1,6 @@
 import { allCastlesSlides } from '../ALLCastles/CastlesSlides';
 import { unescoSlides } from '../ALLUNESCO/UnescoSlides';
-import abruzzo from '../assets/Italy/Abruzzo.jpg';
+import abruzzo from '../assets/states data/abruzzo.jpg';
 import aostaValley from '../assets/states data/aosta.jpg';
 import apulia from '../assets/states data/apulia.jpg';
 import basilicata from '../assets/states data/basilicata.jpg';
@@ -12,20 +12,43 @@ import lazio from '../assets/states data/lazio.jpg';
 import liguria from '../assets/states data/liguria.jpg';
 import lombardy from '../assets/states data/lombardy.jpg';
 import marche from '../assets/states data/marche.jpg';
-import molise from '../assets/states data/molise_.jpg';
-import piedmont from '../assets/states data/piedmon_.jpg';
+import molise from '../assets/states data/molise.jpg';
+import piedmont from '../assets/states data/piedmon.jpg';
 import sardinia from '../assets/states data/sardinia.jpg';
-import sicily from '../assets/states data/sicily_.jpg';
+import sicily from '../assets/states data/sicily.jpg';
 import southTyrol from '../assets/states data/south.jpg';
 import trentino from '../assets/states data/trentino.jpg';
 import tuscany from '../assets/states data/tuscany.jpg';
 import umbria from '../assets/states data/umbria.jpeg';
-import veneto from '../assets/states data/veneto_2.jpg';
+import veneto from '../assets/states data/veneto.jpg';
+
+import mapabruzzo from '../assets/map imgs/abruzzo_1_11zon.jpg';
+import mapaostaValley from '../assets/map imgs/aosta_2_11zon.jpg';
+import mapapulia from '../assets/map imgs/apulia_3_11zon.jpg';
+import mapbasilicata from '../assets/map imgs/basilicata_4_11zon.jpg';
+import mapcalabria from '../assets/map imgs/calabria_5_11zon.jpg';
+import mapcampania from '../assets/map imgs/campania_6_11zon.jpg';
+import mapemilia from '../assets/map imgs/emilia_7_11zon.jpg';
+import mapfriuli from '../assets/map imgs/fruilia_8_11zon.jpg';
+import maplazio from '../assets/map imgs/lazio_9_11zon.jpg';
+import mapliguria from '../assets/map imgs/liguria_10_11zon.jpg';
+import maplombardy from '../assets/map imgs/lombardy_11_11zon.jpg';
+import mapmarche from '../assets/map imgs/marche_12_11zon.jpg';
+import mapmolise from '../assets/map imgs/molise__13_11zon.jpg';
+import mappiedmont from '../assets/map imgs/piedmon__14_11zon.jpg';
+import mapsardinia from '../assets/map imgs/sardinia_15_11zon.jpg';
+import mapsicily from '../assets/map imgs/sicily__16_11zon.jpg';
+// import mapsouthTyrol from '../assets/map imgs/';
+import maptrentino from '../assets/map imgs/trentino_17_11zon.jpg';
+import maptuscany from '../assets/map imgs/tuscany_18_11zon.jpg';
+import mapumbria from '../assets/map imgs/umbria_19_11zon.jpeg';
+import mapveneto from '../assets/map imgs/veneto_2_11zon.jpg';
 
 
 export const statesInfo = [
     {
         image: abruzzo,
+        mapImage:mapabruzzo,
         name: 'Abruzzo',
         desc: "Known for its diverse landscapes including mountains, national parks, and Adriatic coastline, offering outdoor activities and historic towns like L'Aquila",
         banner: "Experience rugged mountain landscapes, charming medieval villages, and the Adriatic coast's pristine beaches.",
@@ -40,6 +63,7 @@ export const statesInfo = [
     },
     {
         image: aostaValley,
+        mapImage:mapaostaValley,
         name: 'Aosta Valley',
         desc: "Located in the Alps, known for its skiing resorts, scenic valleys, and Mont Blanc views, with a mix of French and Italian cultures",
         banner: "Explore alpine wonders and medieval charm in Italy's smallest region, nestled in the heart of the Alps.",
@@ -49,6 +73,7 @@ export const statesInfo = [
     },
     {
         image: apulia,
+        mapImage:mapapulia,
         name: 'Apulia',
         desc: "Famous for its whitewashed trulli houses in Alberobello, olive groves, coastal towns like Bari and Lecce, and the historic port city of Brindisi",
         banner: "Delight in sun-soaked landscapes, whitewashed hill towns, and the unique trulli houses of Italy's southeastern tip.",
@@ -67,6 +92,7 @@ export const statesInfo = [
     },
     {
         image: basilicata,
+        mapImage:mapbasilicata,
         name: 'Basilicata',
         desc: "Home to the ancient city of Matera with its cave dwellings (Sassi), rugged landscapes of Lucanian Dolomites, and the Pollino National Park",
         banner: "Discover ancient cave dwellings, dramatic mountain scenery, and the timeless allure of Matera's Sassi districts.",
@@ -81,6 +107,7 @@ export const statesInfo = [
     },
     {
         image: calabria,
+        mapImage:mapcalabria,
         name: 'Calabria',
         desc: "Known for its rugged mountains, extensive coastline along the Ionian and Tyrrhenian Seas, and historic towns like Reggio Calabria and Tropea",
         banner: "Relax on pristine beaches, explore ancient Greek ruins, and savor traditional Calabrian cuisine in Italy's sun-drenched south.",
@@ -95,6 +122,7 @@ export const statesInfo = [
     },
     {
         image: campania,
+        mapImage:mapcampania,
         name: 'Campania',
         desc: "Famous for Naples, the Amalfi Coast, Pompeii, and Mount Vesuvius; rich in history, art, and UNESCO sites like the Royal Palace of Caserta",
         banner: " From vibrant Naples to the stunning Amalfi Coast and historic Pompeii, dive into southern Italy's vibrant culture and history.",
@@ -113,6 +141,7 @@ export const statesInfo = [
     },
     {
         image: emilia,
+        mapImage:mapemilia,
         name: 'Emilia-Romagna',
         desc: "Renowned for its culinary delights (Parmesan cheese, balsamic vinegar), historic cities (Bologna, Ravenna, Modena), and motor racing (Ferrari)",
         banner: " Savor Italy's gastronomic heartland with world-renowned cuisine like Bolognese pasta and Parmigiano Reggiano cheese.",
@@ -131,6 +160,7 @@ export const statesInfo = [
     },
     {
         image: friuli,
+        mapImage:mapfriuli,
         name: 'Friuli-Venezia Giulia',
         desc: "Known for its alpine scenery, Adriatic beaches, Trieste's cultural heritage, and the UNESCO-listed vineyard landscapes of Collio",
         banner: "Delight in a blend of Italian, Slovenian, and Austrian influences amidst stunning Adriatic coastline and lush countryside.",
@@ -145,6 +175,7 @@ export const statesInfo = [
     },
     {
         image: lazio,
+        mapImage:maplazio,
         name: 'Lazio',
         desc: "Home to Rome, Italy's capital, and Vatican City; rich in ancient Roman ruins (Colosseum, Roman Forum), Renaissance art, and Mediterranean coastline",
         banner: "Marvel at ancient Rome's iconic landmarks, Vatican City's treasures, and the scenic countryside of central Italy.",
@@ -163,6 +194,7 @@ export const statesInfo = [
     },
     {
         image: liguria,
+        mapImage:mapliguria,
         name: 'Liguria',
         desc: "Famous for the Italian Riviera with charming towns like Cinque Terre, Genoa's maritime history, and the beautiful Portofino peninsula",
         banner: "Discover the enchanting Italian Riviera, where colorful villages cling to rugged cliffs above the sparkling Ligurian Sea.",
@@ -177,6 +209,7 @@ export const statesInfo = [
     },
     {
         image: lombardy,
+        mapImage:maplombardy,
         name: 'Lombardy',
         desc: "Italy's financial and fashion capital, Milan, lakes like Como and Garda, the art city of Bergamo, and cultural sites like Mantua and Cremona",
         banner: "Experience the bustling fashion capital of Milan and serene lakeside retreats in Italy's economic powerhouse",
@@ -191,6 +224,7 @@ export const statesInfo = [
     },
     {
         image: marche,
+        mapImage:mapmarche,
         name: 'Marche',
         desc: "Known for its hilltop towns, Renaissance art in Urbino, coastline with sandy beaches, and natural parks like Monte Conero and Sibillini Mountains",
         banner: "Explore a lesser-known gem boasting pristine beaches, historic towns, and Renaissance art along the Adriatic coast",
@@ -209,6 +243,7 @@ export const statesInfo = [
     },
     {
         image: molise,
+        mapImage:mapmolise,
         name: 'Molise',
         desc: "A region of pristine nature, medieval villages like Campobasso and Termoli, agricultural traditions, and the Molise National Park",
         banner: "Uncover Italy's best-kept secret with quaint villages, untouched nature reserves, and a taste of authentic rural life",
@@ -218,6 +253,7 @@ export const statesInfo = [
     },
     {
         image: piedmont,
+        mapImage:mappiedmont,
         name: 'Piedmont',
         desc: "Famous for the Alps, the Shroud of Turin, gourmet cuisine (Barolo wine, truffles), elegant Turin, and historic towns like Asti and Alba",
         banner: "Indulge in culinary delights and scenic vineyards in this region famed for its truffles and Barolo wine",
@@ -232,6 +268,7 @@ export const statesInfo = [
     },
     {
         image: sardinia,
+        mapImage:mapsardinia,
         name: 'Sardinia',
         desc: " Known for its stunning beaches, rugged interior, prehistoric Nuraghe structures, and cities like Cagliari and Alghero",
         banner: "Escape to turquoise waters, rugged coastlines, and Bronze Age ruins on Italy's second-largest island known for its unique traditions",
@@ -246,6 +283,7 @@ export const statesInfo = [
     },
     {
         image: sicily,
+        mapImage:mapsicily,
         name: 'Sicily',
         desc: "Italy's largest island with diverse attractions: Mount Etna, Greek temples in Agrigento, Baroque cities like Palermo and Catania, and beaches.",
         banner: " From Mount Etna's volcanic landscapes to Palermo's bustling markets and ancient Greek temples, Sicily offers a mosaic of history and natural beauty",
@@ -264,6 +302,7 @@ export const statesInfo = [
     },
     {
         image: southTyrol,
+        // mapImage:,
         name: 'South Tyrol',
         desc: "South Tyrol, nestled in the Italian Alps, is characterized by its stunning mountain scenery and rich cultural heritage blending Italian and Austrian traditions. ",
         banner: "Experience a blend of Austrian and Italian cultures amid the stunning Dolomite mountains, perfect for outdoor adventures and Alpine relaxation",
@@ -278,6 +317,7 @@ export const statesInfo = [
     },
     {
         image: trentino,
+        mapImage:maptrentino,
         name: 'Trentino',
         desc: "A region of contrasts with the Dolomites, German-speaking towns like Bolzano, Alpine lakes, and ski resorts",
         banner: "Immerse yourself in Alpine beauty and Tyrolean culture in this region known for its dramatic mountains and charming villages",
@@ -292,6 +332,7 @@ export const statesInfo = [
     },
     {
         image: tuscany,
+        mapImage:maptuscany,
         name: 'Tuscany',
         desc: "Famous for Florence's Renaissance art, Pisa's Leaning Tower, medieval towns like Siena and San Gimignano, and vineyards of Chianti",
         banner: "Bask in the Renaissance splendor of Florence, rolling vineyards of Chianti, and the timeless beauty of its hilltop towns",
@@ -310,6 +351,7 @@ export const statesInfo = [
     },
     {
         image: umbria,
+        mapImage:mapumbria,
         name: 'Umbria',
         desc: "Known as Italy's 'green heart' , with hill towns like Perugia and Assisi (St. Francis' birthplace), art treasures, and scenic landscapes",
         banner: "Discover the 'Green Heart of Italy,' dotted with medieval hill towns, verdant valleys, and spiritual centers like Assisi",
@@ -324,6 +366,7 @@ export const statesInfo = [
     },
     {
         image: veneto,
+        mapImage:mapveneto,
         name: 'Veneto',
         desc: "Venice's canals and St. Mark's Basilica, Verona's Roman amphitheater, Palladian villas, Dolomites' skiing, and Prosecco wine region.",
         banner: "From romantic Venice to historic Verona, uncover art, culture, and the scenic landscapes of Italy's northeast",

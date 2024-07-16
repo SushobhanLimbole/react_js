@@ -1,5 +1,5 @@
-import heroSection from '../assets/Italy/henrique-ferreira-RKsLQoSnuTc-unsplash.jpg';
-import smallSection from '../assets/all_unesco/31_villa_tivoli.jpg';
+import heroSection from '../assets/hero section/2_historic_c_rome_11zon.jpg';
+import smallSection from '../assets/small section/allunesco.jpg';
 import './ALLUNESCO.css';
 import ContentBox1 from '../ContentBox/ContentBox1';
 import { unescoSlider, unescoSlides } from './UnescoSlides';
@@ -50,8 +50,8 @@ export default function ALLUNESCO() {
                 }}
             >
                 <div className='carousel-caption'>
-                    <h1 className='carousel-label'>Venice</h1>
-                    <h3 className='carousel-capt'>The Floating City</h3>
+                    <h1 className='carousel-label'>Lazio</h1>
+                    <h3 className='carousel-capt'>The Historic Centre of Rome</h3>
                 </div>
             </div>
 

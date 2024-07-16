@@ -648,7 +648,7 @@ function ItalyMobileMap() {
 
 
 			<Link className='anchor' to={`/state/${currentData}`} state={currentData}><div className="map-content">
-				<img src={currentData.image} alt={currentData.name}/>
+				<img src={currentData.mapImage} alt={currentData.name}/>
 				<div className="map-content-name">
 					<h1>{currentData.name}</h1>
 					<p>{currentData.desc}</p>

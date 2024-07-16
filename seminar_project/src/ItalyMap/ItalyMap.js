@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './ItalyMap.css';
 import { statesInfo } from './StatesData';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function ItalyMap() {
 
 	const [currentData, setCurrentData] = useState(statesInfo[0]);
-	const navigate = useNavigate();
 
 
 	const handleMouseAbruzzo = () => {
@@ -78,11 +77,6 @@ function ItalyMap() {
 
 	const handleMouseSicily = () => {
 		setCurrentData(statesInfo[15]);
-	};
-
-
-	const handleMouseSouthTyrol = () => {
-		setCurrentData(statesInfo[16]);
 	};
 
 
@@ -736,7 +730,7 @@ function ItalyMap() {
 			</div>
 
 			<Link className='anchor' to={`/state/${currentData}`} state={currentData}><div className="map-content">
-				<img src={currentData.image} />
+				<img src={currentData.mapImage} alt={currentData.name}/>
 				<div className="map-content-name">
 					<h1>{currentData.name}</h1>
 					<p>{currentData.desc}</p>

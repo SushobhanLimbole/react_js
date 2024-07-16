@@ -4,6 +4,11 @@ import './Footer.css';
 import insta from '../assets/social media/insta.png';
 import google from '../assets/social media/gg.png';
 import X from '../assets/social media/x.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faLinkedin } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faCopyright } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Footer(params) {
     return (
@@ -42,18 +47,16 @@ export default function Footer(params) {
                 <div className='social-media-section'>
                     <h1>Let us keep in touch</h1>
                     <div className='social-media-inner-section'>
-                        <div className='social-media-icon' style={{
-                            backgroundImage: `url(${google})`
-                        }}></div>
-                        <div className='social-media-icon' style={{
-                            backgroundImage: `url(${insta})`
-                        }}></div>
-                        <div className='social-media-icon' style={{
-                            backgroundImage: `url(${X})`
-                        }}></div>
+                        <Link to='https://www.linkedin.com/in/sushobhan-limbole-180208258/'>
+                            <FontAwesomeIcon size='3x' icon={faLinkedin} />
+                        </Link>
+                        <Link to='https://www.instagram.com/limbolesushobhan/'>
+                            <FontAwesomeIcon size='3x' icon={faInstagram} />
+                        </Link>
                     </div>
                 </div>
             </footer>
+            <h1 className='copyright'>©️Copyright by Sushobhan Limbole</h1>
         </>
     );
 }

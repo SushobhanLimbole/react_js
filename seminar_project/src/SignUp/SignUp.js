@@ -1,9 +1,9 @@
 import './SignUp.css';
-import loginimg from '../assets/states data/sicily_.jpg';
+import loginimg from '../assets/login imgs/signup.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { addUser, firebaseAuth } from '../Firebase/Firebase';
-import { createUserWithEmailAndPassword, EmailAuthCredential } from 'firebase/auth/web-extension';
+import { firebaseAuth } from '../Firebase/Firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth/web-extension';
 import { updateProfile } from 'firebase/auth';
 
 export default function SignUp() {

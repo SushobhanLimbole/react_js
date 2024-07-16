@@ -1,8 +1,10 @@
 import { allCastlesSlides, castleSlider } from './CastlesSlides';
 import ContentBox2 from '../ContentBox/ContentBox2';
 import Carousel from 'react-bootstrap/Carousel';
+import smallSection from '../assets/small section/allcastles.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
+import heroSection from '../assets/hero section/allcastles.jpg';
 import banner from '../assets/banner/quote_banner_2.webp';
 import Footer from '../Footer/Footer';
 
@@ -39,7 +41,7 @@ export default function ALLCastles() {
             <div
                 className="hero-section"
                 style={{
-                    backgroundImage: `url(${allCastlesSlides[20].image})`,
+                    backgroundImage: `url(${heroSection})`,
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                 }}
@@ -64,7 +66,7 @@ export default function ALLCastles() {
                     <h1>Discover Italy's Majestic Castles</h1>
                     <h3>Explore the enchanting world of Italy's castles, from the iconic Castel Sant'Angelo in Rome to the unique Castel del Monte in Apulia. Each castle offers a glimpse into the past, with stunning architecture and fascinating histories that captivate every visitor. Journey through Italy and uncover the timeless beauty of these historic fortresses.</h3>
                 </div>
-                <img className='info-pic' src={allCastlesSlides[11].image} />
+                <img className='info-pic' src={smallSection} />
             </div>
 
             <div className="destinations">
